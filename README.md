@@ -1,4 +1,4 @@
-# Synthesi
+# Synthesi 🌱
 
 > Somos o Synthesi, do 2° período de projetos do Cesar school. Estamos trabalhando em colaboração com a ONG Gotas de Flor Com Amor, produzindo novo material para sua organização 
 
