@@ -4,9 +4,11 @@
 
 > "O Gotas de Flor com Amor é um programa social que, desde 1992, esta presente na vida de vários jovens e crianças - em situação de vulnerabilidade social - da comunidade do entorno da Avenida Jornalista Roberto Marinho, zona sul de São Paulo"
 
+## Diagrama de atividades 🔀
+
 https://showme.redstarplugin.com/d/d:wbmKox00
 
-## Programação em par experimentada
+## Programação em par experimentada 💻
 
 Nesse projeto tivemos que criar um aplicativo web usando Python, Django, HTML e CSS, e optamos por implementar a prática de pair programming desde o início. A combinação de nossas habilidades permitiu uma base sólida para o projeto. A colaboração constante foi crucial, compartilhando conhecimento sobre Python, otimização de banco de dados e estruturação de HTML. Encontrar soluções para problemas complexos foi mais rápido, com um de nós focando na resolução enquanto o outro revisava o código, minimizando erros e melhorando a qualidade geral. Além disso, a prática fortaleceu nossas habilidades de comunicação técnica e nos levou a escrever código mais limpo, modular e bem documentado. Aprendemos continuamente um com o outro, explorando novas funcionalidades do Django, truques de CSS e técnicas eficazes em Python.
 
