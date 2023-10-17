@@ -18,6 +18,10 @@ https://www.figma.com/file/5DeQDzR7YgGEXEVC0E2Gqw/Untitled?type=design&node-id=0
 
 
 
+https://github.com/rodlucenac/Synthesi/assets/133917236/134cb639-b9e0-4509-8560-336c4c097c6b
+
+
+
 ## Diagrama de atividades 🔀
 
 ![image](https://github.com/rodlucenac/Synthesi/assets/133917236/7465ecbe-ee7a-4909-9154-c15887705553)
