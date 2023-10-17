@@ -4,6 +4,12 @@
 
 > "O Gotas de Flor com Amor é um programa social que, desde 1992, esta presente na vida de vários jovens e crianças - em situação de vulnerabilidade social - da comunidade do entorno da Avenida Jornalista Roberto Marinho, zona sul de São Paulo"
 
+## Storyboard
+
+![Histórias do Usuários](https://github.com/rodlucenac/Synthesi/assets/133917236/e021da31-16a6-4bc5-8eac-8aff47821def)
+
+#### Das 5 histórias de usuário, a terceira e a quinta foram escolhidas para serem implementadas.
+
 ## Diagrama de atividades 🔀
 
 https://showme.redstarplugin.com/d/d:wbmKox00
