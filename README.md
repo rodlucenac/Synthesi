@@ -12,7 +12,7 @@
 
 ## Diagrama de atividades 🔀
 
-https://showme.redstarplugin.com/d/d:wbmKox00
+![image](https://github.com/rodlucenac/Synthesi/assets/133917236/7465ecbe-ee7a-4909-9154-c15887705553)
 
 ## Programação em par experimentada 💻
 
