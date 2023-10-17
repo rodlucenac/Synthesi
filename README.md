@@ -10,6 +10,14 @@
 
 #### Das 5 histórias de usuário, a terceira e a quinta foram escolhidas para serem implementadas.
 
+## Link do Protótipo de Baixa Fidelidade 
+
+https://www.figma.com/file/5DeQDzR7YgGEXEVC0E2Gqw/Untitled?type=design&node-id=0-1&mode=design
+
+## Screencast do Protótipo 📽️
+
+
+
 ## Diagrama de atividades 🔀
 
 ![image](https://github.com/rodlucenac/Synthesi/assets/133917236/7465ecbe-ee7a-4909-9154-c15887705553)
