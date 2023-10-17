@@ -10,7 +10,7 @@
 
 #### Das 5 histórias de usuário, a terceira e a quinta foram escolhidas para serem implementadas.
 
-## Link do Protótipo de Baixa Fidelidade 
+## Link do Protótipo de Baixa Fidelidade 🔗
 
 https://www.figma.com/file/5DeQDzR7YgGEXEVC0E2Gqw/Untitled?type=design&node-id=0-1&mode=design
 
@@ -28,4 +28,4 @@ Nesse projeto tivemos que criar um aplicativo web usando Python, Django, HTML e 
 
 Apesar dos benefícios, enfrentamos desafios, incluindo diferenças de opinião sobre abordagens específicas para problemas e a necessidade de coordenar nossos horários ocupados para as sessões de pair programming. Além disso, as longas sessões podiam ser mentalmente exaustivas, exigindo pausas para evitar a fadiga e manter nossa produtividade. No entanto, superamos esses obstáculos por meio de discussões construtivas e estabelecendo um cronograma regular. No final, a prática de pair programming não apenas resultou em um aplicativo funcional, mas também enriqueceu nossas habilidades de desenvolvimento e solidificou nossa parceria como desenvolvedores, proporcionando uma base sólida para o futuro desse projeto.
 
-## Screencast 📽️
+## Screencast do uso do sistema 📽️
