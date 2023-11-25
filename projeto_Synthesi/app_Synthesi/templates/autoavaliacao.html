@@ -2,21 +2,22 @@
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="autoavaliacao.css">
+    <link rel="stylesheet" href="{% static 'autoavaliacao.css' %}">
     <title>Document</title>
 </head>
 
 <body>
-    <img src="imgs/autoavaliacaotxt.png" alt="" id="atividades">
-    <img src="imgs/perfil.png" alt="" id="perfil">
-    <img src="imgs/seta.svg" alt="" id="seta">
+    <img src="{% static 'autoavaliacaotxt.png' %}" alt="" id="atividades">
+    <img src="{% static 'perfil.png' %}" alt="" id="perfil">
+    <img src="{% static 'seta.svg' %}" alt="" id="seta">
     <p id="alunoa">Aluno A</p>
-    <img src="imgs/elipse.svg" alt="" id="elipse">
-    <img src="imgs/perfil.png" alt="" id="perfil2">
-    <img src="imgs/elipse_verde.svg" alt="" id="elipse_verde">
-    <img src="imgs/exclamação.png" alt="" id="exclamacao">
+    <img src="{% static 'elipse.svg' %}" alt="" id="elipse">
+    <img src="{% static 'perfil.png' %}" alt="" id="perfil2">
+    <img src="{% static 'elipse_verde.svg' %}" alt="" id="elipse_verde">
+    <img src="{% static exclamação.png' %}" alt="" id="exclamacao">
 
     <div id="divmaterias">
         <div style="width: 621px; height: 83px; flex-shrink: 0; border-radius: 10px; border: 5px solid #634CD9; background: #634CD9;">
@@ -25,29 +26,29 @@
             </p>
         </div>
         <div style="width: 621px; height: 83px; flex-shrink: 0; border-radius: 20px; border: 5px solid #634CD9; background: #FFFF;">
-            <img src="imgs/elipse_verde.svg" alt="" id="icone" style="position: absolute; top: 20%; left: 30px;">
-            <img src="imgs/sorrindo.png" alt="" id="icone2" style="top: 20.5%;">
+            <img src="{% static 'elipse_verde.svg' %}" alt="" id="icone" style="position: absolute; top: 20%; left: 30px;">
+            <img src="{% static 'sorrindo.png' %}" alt="" id="icone2" style="top: 20.5%;">
             <p style="width: 700px; text-align: justify; text-align-last: left; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px; font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: 120px; left: 107px; margin: 0;">
                Excelente
             </p>
         </div>
         <div style="width: 621px; height: 83px; flex-shrink: 0; border-radius: 20px; border: 5px solid #634CD9; background: #FFFF;">
-            <img src="imgs/elipse_amarela.svg" alt="" id="icone" style="top: 210px;">
-            <img src="imgs/serio.png" alt="" id="icone2" style="top: 211px;">
+            <img src="{% static 'elipse_amarela.svg' %}" alt="" id="icone" style="top: 210px;">
+            <img src="{% static 'serio.png' %}" alt="" id="icone2" style="top: 211px;">
             <p style="width: 700px; text-align: justify; text-align-last: left; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px; font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: 210px; left: 107px; margin: 0;">
                Bom
             </p>
         </div>
         <div style="width: 621px; height: 83px; flex-shrink: 0; border-radius: 20px; border: 5px solid #634CD9; background: #FFFF;">
-            <img src="imgs/elipse_vermelha.svg" alt="" id="icone" style="top:300px;">
-            <img src="imgs/triste.png" alt="" id="icone2" style="top: 302px;">
+            <img src="{% static 'elipse_vermelha.svg' %}" alt="" id="icone" style="top:300px;">
+            <img src="{% static triste.png' %}" alt="" id="icone2" style="top: 302px;">
             <p style="width: 700px; text-align: justify; text-align-last: left; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px; font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: 300px; left: 107px; margin: 0;">
             A desejar
             </p>
         </div>
         <div style="width: 621px; height: 183px; flex-shrink: 0; border-radius: 20px; border: 5px solid #634CD9; background: #FFFF;">
-            <img src="imgs/elipse_cinza.svg" alt="" id="icone" style="top: 435px;">
-            <img src="imgs/semboca.png" alt="" id="icone2" style="top: 437px;" >
+            <img src="{% static 'elipse_cinza.svg' %}" alt="" id="icone" style="top: 435px;">
+            <img src="{% static 'semboca.png' %}" alt="" id="icone2" style="top: 437px;" >
             <p style="width: 700px; text-align: justify; text-align-last: left; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px; font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: 440px; left: 107px; margin: 0;">
             O aluno nào se autoavaliou
             </p>
@@ -65,15 +66,15 @@
 
     <div id="divpresenca">
         <p id="presencageral">Presença geral</p>
-        <img src="imgs/elipse_verde.svg" alt="" id="elipse_verde2">
-        <img src="imgs/correto.png" alt="" id="correto">
-        <img src="imgs/elipse_vermelha.svg" alt="" id="elipse_vermelha">
-        <img src="imgs/x.png" alt="" id="x">
+        <img src="{% static 'elipse_verde.svg' %}" alt="" id="elipse_verde2">
+        <img src="{% static 'correto.png' %}" alt="" id="correto">
+        <img src="{% static 'elipse_vermelha.svg' %}" alt="" id="elipse_vermelha">
+        <img src="{% static x.png %}" alt="" id="x">
     </div>
     <div id="divausencia">
         <p id="ausencia">Ausência em</p>
         <p id="ausencia2">atividade(S):</p>
-        <img src="imgs/elipse_amarela.svg" alt="" id="elipse_amarela">
+        <img src="{% static'elipse_amarela.svg' %}" alt="" id="elipse_amarela">
     </div>
     <div id="linha"></div>
     <div id="linha2"></div>
@@ -81,13 +82,13 @@
     <div id="divcomparecimento">
         <p id="compdiario">Comparecimento Diário</p>
         <div id="legenda">
-            <img src="imgs/elipse_verde.svg" alt="" id="elipse_legenda"
+            <img src="{% static 'elipse_verde.svg' %}" alt="" id="elipse_legenda"
                 style="position: absolute; top: 13px; ; left: 15px;">
-            <img src="imgs/elipse_amarela.svg" alt="" id="elipse_legenda"
+            <img src="{% static 'elipse_amarela.svg' %}" alt="" id="elipse_legenda"
                 style="position: absolute; top: 40%; transform: translateY(-50%); left: 15px;">
-            <img src="imgs/elipse_vermelha.svg" alt="" id="elipse_legenda"
+            <img src="{% static 'elipse_vermelha.svg' %}" alt="" id="elipse_legenda"
                 style="position: absolute; top: 55px; ; left: 15px;">
-            <img src="imgs/elipse_cinza.svg" alt="" id="elipse_legenda"
+            <img src="{% static 'elipse_cinza.svg' %}" alt="" id="elipse_legenda"
                 style="position: absolute; top: 75px; ; left: 15px;">
             <p id="legendatxt" style="position: absolute; top: -3px; ; left: 30px;">Excelente</p>
             <p id="legendatxt" style="position: absolute; top: 27%; transform: translateY(-50%) ; left: 12px;">Bom</p>
@@ -101,9 +102,9 @@
 
     <div id="marcacao">
         <div id="mes">
-            <img src="imgs/seta.svg" alt=""
+            <img src="{% static 'seta.svg' %}" alt=""
                 style="position: absolute; top: 50%; transform: translateY(-50%); left: 10px;">
-            <img src="imgs/seta.svg" alt=""
+            <img src="{% static 'seta.svg' %}" alt=""
                 style="position: absolute; top: 15%; transform: translateY(-50%); right: 10px; transform: rotate(-180.205deg);">
         </div>
 

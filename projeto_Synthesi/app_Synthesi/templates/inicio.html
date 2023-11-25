@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="{% static 'inicio.css' %}">
 </head>
 <body>
-    <img src="imgs/clorofill.png" alt="" id="clorofill">
-    <img src="imgs/login.png" alt="" id="login">
+    <img src="{% static 'clorofill.png' %}" alt="" id="clorofill">
+    <img src="{% static 'login.png' %}" alt="" id="login">
     <p id="p1">Acesse por meio dos seus dados cadastrados</p>
     <div id="div1">
         <p id="emailtxt">Email</p>
@@ -18,15 +19,15 @@
         <p id="esqueceu">Esqueceu sua senha?</p>
         <button id="continuar"></button>
     </div>
-    <img src="imgs/cadastro.png" alt="" id="cadastro">
+    <img src="{%static 'cadastro.png' %}" alt="" id="cadastro">
     <p id="p2">Selecione uma opção e registre seus dados</p>
-    <img src="imgs/folha.png" alt="" id="folha">
+    <img src="{% static 'folha.png' %}" alt="" id="folha">
     <div id="div2">
-        <img src="imgs/Ellipse.png" alt="" id="elipse">
-        <img src="imgs/professor.png" alt="" id="professor">
+        <img src="{% static 'Ellipse.png' %}" alt="" id="elipse">
+        <img src="{% static 'professor.png' %}" alt="" id="professor">
         <p id="professortxt">PROFESSOR</p>
-        <img src="imgs/Ellipse.png" alt="" id="elipse2">
-        <img src="imgs/gestao.png" alt="" id="gestao">
+        <img src="{% static 'Ellipse.png' %}" alt="" id="elipse2">
+        <img src="{% static 'gestao.png' %}" alt="" id="gestao">
         <p id="gestaotxt">GESTÃO</p>
     </div>
 </body>

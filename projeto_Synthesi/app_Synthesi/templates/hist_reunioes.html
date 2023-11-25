@@ -2,21 +2,22 @@
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reunioes.css">
+    <link rel="stylesheet" href="{% static 'reunioes.css' %}">
     <title>Document</title>
 </head>
 
 <body>
-    <img src="imgs/reunioestxt.png" alt="" id="atividades">
-    <img src="imgs/perfil.png" alt="" id="perfil">
-    <img src="imgs/seta.svg" alt="" id="seta">
+    <img src="{% static 'reunioestxt.png' %}" alt="" id="atividades">
+    <img src="{% static 'perfil.png' %}" alt="" id="perfil">
+    <img src="{% static 'seta.svg' %}" alt="" id="seta">
     <p id="alunoa">Aluno A</p>
-    <img src="imgs/elipse.svg" alt="" id="elipse">
-    <img src="imgs/perfil.png" alt="" id="perfil2">
-    <img src="imgs/elipse_verde.svg" alt="" id="elipse_verde">
-    <img src="imgs/exclamação.png" alt="" id="exclamacao">
+    <img src="{% static 'elipse.svg' %}" alt="" id="elipse">
+    <img src="{% static 'perfil.png' %}" alt="" id="perfil2">
+    <img src="{% static 'elipse_verde.svg' %}" alt="" id="elipse_verde">
+    <img src="{% static 'exclamação.png' %}" alt="" id="exclamacao">
 
     <div id="divdados">
         <p id="p1">Sala: 1</p>
@@ -27,9 +28,9 @@
 
     <div id="datas">
         <div id="ano">
-            <img src="imgs/seta.svg" alt=""
+            <img src="{% static 'seta.svg' %}" alt=""
                 style="position: absolute; top: 50%; transform: translateY(-50%); left: 10px;">
-            <img src="imgs/seta.svg" alt=""
+            <img src="{% static 'seta.svg' %}" alt=""
                 style="position: absolute; top: 15%; transform: translateY(-50%); right: 10px; transform: rotate(-180.205deg);">
         </div>
         <div id="mes" style="top: 108px; left: 37px;"></div>
@@ -61,13 +62,13 @@
     </div>
     
     <div id="legenda">
-        <img src="imgs/exclamacao3.png" alt="" id="exclamacao" style="top: 17px; left: 18px;">
+        <img src="{% static 'exclamacao3.png' %}" alt="" id="exclamacao" style="top: 17px; left: 18px;">
         <p id="faltas" style="top: 17px; left: 80px;">1 Falta</p>
-        <img src="imgs/exclamação.png" alt="" id="exclamacao" style="top: 17px; left: 188px;">
+        <img src="{% static 'exclamação.png' %}" alt="" id="exclamacao" style="top: 17px; left: 188px;">
         <p id="faltas" style="top: 17px; left: 252px;">3 Falta</p>
-        <img src="imgs/excalamacao2.svg" alt="" id="exclamacao" style="top: 89px; left: 18px;">
+        <img src="{% static 'excalamacao2.svg' %}" alt="" id="exclamacao" style="top: 89px; left: 18px;">
         <p id="faltas" style="top: 89px; left: 80px;">2 Falta</p>
-        <img src="imgs/exclamacao4.png" alt="" id="exclamacao" style="top: 89px; left: 188px;">
+        <img src="{% static 'exclamacao4.png' %}" alt="" id="exclamacao" style="top: 89px; left: 188px;">
         <p id="faltas" style="top: 89px; left: 252px;">+3 Faltas</p>
     </div>
 
