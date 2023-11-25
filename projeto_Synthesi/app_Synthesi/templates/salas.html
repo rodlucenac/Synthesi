@@ -1,146 +1,31 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            font-family: Arial, sans-serif;
-            position: relative;
-        }
-
-        .header {
-            background-color: #9eadba;
-            height: 35px;
-            width: 100%;
-        }
-
-        .image-1 {
-            position: absolute;
-            top: 55px;
-            left: 30px;
-            width: 200px;
-            height: auto;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            min-height: calc(100vh - 40px);
-            flex-wrap: wrap;
-        }
-
-        .image-button {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin: 10px;
-            flex: 1;
-            max-width: 200px;
-            position: relative;
-        }
-
-        .button {
-            background: url('img1_salas.png') center;
-            background-size: cover;
-            width: 120px;
-            height: 120px;
-            border: none;
-            cursor: pointer;
-            position: relative;
-        }
-        .button2 {
-            background: url('img1_salas.png') center;
-            background-size: cover;
-            width: 120px;
-            height: 120px;
-            border: none;
-            cursor: pointer;
-            position: relative;
-        }
-        .button3 {
-            background: url('img2_salas.png') center;
-            background-size: cover;
-            margin-top: 50px;
-            margin-left: 50px;
-            width: 140px;
-            height: 140px;
-            border: none;
-            cursor: pointer;
-            position: relative;
-        }
-        .button4 {
-            background: url('img2_salas.png') center;
-            background-size: cover;
-            width: 140px;
-            height: 140px;
-            border: none;
-            cursor: pointer;
-            position: relative;
-        }
-        .button-label {
-            margin-top: 10px;
-            font-weight: 450;
-            font-size: 35px;
-        }
-
-        .button-label2 {
-            margin-top: 5px;
-            font-weight: 200;
-        }
-
-        @media (max-width: 768px) {
-            .image-button {
-                margin: 10px;
-                max-width: 150px;
-            }
-
-            .button {
-                width: 120px;
-                height: 120px;
-            }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Salas</title>
+    <link rel="stylesheet" href="salas.css">
 </head>
-
 <body>
-    <div class="header"></div>
-    <img src="image-1" class="image-1" alt="Imagem 1">
-    <div class="container">
-        <div class="image-button">
-            <a href="{% url 'monitoramento' %}">
-                <button class="button"></button>
-            </a>
-            <div class="button-label">Sala 1</div>
-            <div class="button-label2">Manhã</div>
-        </div>
-        <div class="image-button">
-            <a href="{% url 'monitoramento' %}">
-                <button class="button2"></button>
-            </a>
-            <div class="button-label">Sala 2</div>
-            <div class="button-label2">Manhã</div>
-        </div>
-        <div class="image-button">
-            <a href="{% url 'monitoramento' %}">
-                <button class="button"></button>
-            </a>
-            <div class="button-label">Sala 1</div>
-            <div class="button-label2">Tarde</div>
-        </div>
-        <div class="image-button">
-            <a href="{% url 'monitoramento' %}">
-                <button class="button2"></button>
-            </a>
-            <div class="button-label">Sala 2</div>
-            <div class="button-label2">Tarde</div>
-        </div>
+    <img src="imgs/salas.png" alt="" id="salas">
+    <img src="imgs/folha_salas.png" alt="" id="folha_salas">
+    <div id="div">
+        <img src="imgs/Ellipse.png" alt="" id="elipse1">
+        <img src="imgs/Ellipse.png" alt="" id="elipse2">
+        <img src="imgs/Ellipse.png" alt="" id="elipse3">
+        <img src="imgs/Ellipse.png" alt="" id="elipse4">
+        <img src="imgs/eueomundo.png" alt="" id="icn1">
+        <img src="imgs/eueomundo.png" alt="" id="icn2">
+        <img src="imgs/noseomundo.png" alt="" id="icn3">
+        <img src="imgs/noseomundo.png" alt="" id="icn4">
+        <p id="p1">Eu e o Mundo</p>
+        <p id="t1">Manhã</p>
+        <p id="p2">Eu e o Mundo</p>
+        <p id="t2">Manhã</p>
+        <p id="p3">Nós e o Mundo</p>
+        <p id="t3">Tarde</p>
+        <p id="p4">Nós e o Mundo</p>
+        <p id="t4">Tarde</p>
     </div>
 </body>
-
 </html>

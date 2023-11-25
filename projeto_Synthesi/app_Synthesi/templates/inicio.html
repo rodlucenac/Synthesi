@@ -1,91 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            font-family: Arial, sans-serif;
-            position: relative;
-        }
-
-        .header {
-            background-color: #9eadba;
-            height: 35px;
-            width: 100%;
-        }
-
-        .image-1 {
-            position: absolute;
-            top: 55px; 
-            left: 30px; 
-            width: 200px; 
-            height: auto; 
-        }
-
-        .container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            min-height: calc(100vh - 40px);
-            flex-wrap: wrap;
-        }
-
-        .image-button {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin: 100px;
-            flex: 1;
-            max-width: 200px;
-        }
-
-        .button {
-            background: url('silhueta.png') center center no-repeat;
-            background-size: cover;
-            width: 200px;
-            height: 200px;
-            border: none;   
-            cursor: pointer;
-        }
-
-        .button-label {
-            margin-top: 10px;
-            font-weight: 450;
-            font-size: 35px;
-        }
-
-        @media (max-width: 768px) {
-            .image-button {
-                margin: 10px;
-                max-width: 150px;
-            }
-            .button {
-                width: 120px;
-                height: 120px;
-            }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="inicio.css">
 </head>
 <body>
-    <div class="header"></div>
-    <img src="image-1.png" class="image-1" alt="Imagem-1">
-    <div class="container">
-        <div class="image-button">
-            <a href="login">
-                <button class="button"></button>
-            </a>
-            <div class="button-label">Professor</div>
-        </div>
-        <div class="image-button">
-            <a href="{% url 'login' %}">
-                <button class="button"></button>
-            </a>
-            <div class="button-label">Gestão</div>
-        </div>
+    <img src="imgs/clorofill.png" alt="" id="clorofill">
+    <img src="imgs/login.png" alt="" id="login">
+    <p id="p1">Acesse por meio dos seus dados cadastrados</p>
+    <div id="div1">
+        <p id="emailtxt">Email</p>
+        <input type="email" name="" id="email">
+        <p id="senhatxt">Senha</p>
+        <input type="password" name="" id="senha">
+        <p id="esqueceu">Esqueceu sua senha?</p>
+        <button id="continuar"></button>
+    </div>
+    <img src="imgs/cadastro.png" alt="" id="cadastro">
+    <p id="p2">Selecione uma opção e registre seus dados</p>
+    <img src="imgs/folha.png" alt="" id="folha">
+    <div id="div2">
+        <img src="imgs/Ellipse.png" alt="" id="elipse">
+        <img src="imgs/professor.png" alt="" id="professor">
+        <p id="professortxt">PROFESSOR</p>
+        <img src="imgs/Ellipse.png" alt="" id="elipse2">
+        <img src="imgs/gestao.png" alt="" id="gestao">
+        <p id="gestaotxt">GESTÃO</p>
     </div>
 </body>
 </html>

@@ -1,0 +1,357 @@
+body{
+    background: #0C004C;
+    text-align: center;
+}
+
+#eu_eo_mundo{
+    width: 693px;
+    height: 123px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#manha{
+    width: 107px;
+    height: 39px;
+    flex-shrink: 0;
+    color: #8CE264;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 143px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#pesquisa{
+    width: 280px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 246px;
+    left: 63%;
+    transform: translateX(-50%);
+
+}
+
+#elipse{
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    fill: #634CD9;
+    position: absolute;
+    top: 251px;
+    left: 820px;
+}
+
+#lupa{
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    fill: #634CD9;
+    position: absolute;
+    top: 251px;
+    left: 820px;
+}
+
+#perfil{
+    width: 71px;
+    height: 71px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 34px;
+    left: 1236px;
+}
+
+#seta{
+    width: 57px;
+    height: 57px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 47px;
+    left: 122px;
+}
+
+
+
+#div1{
+    width: 700px;
+    height: 607px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 292px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#div2{
+    width: 168px;
+    height: 221px;
+    flex-shrink: 0;
+    border-radius: 31px;
+    border: 5px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 292px;
+    left: 20%;
+    transform: translateX(-50%);
+}
+
+#elipse1{
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 20px;
+    left: 12%;
+    transform: translateX(-50%);
+}
+#elipse2{
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 20px;
+    left: 37%;
+    transform: translateX(-50%);
+}
+#elipse3{
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 20px;
+    left: 63%;
+    transform: translateX(-50%);
+}
+#elipse4{
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 20px;
+    left: 88%;
+    transform: translateX(-50%);
+}
+
+#perfil1{
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 24.5px;
+    left: 12%;
+    transform: translateX(-50%);
+}
+#perfil2{
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 24.5px;
+    left: 37%;
+    transform: translateX(-50%);
+}
+#perfil3{
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 24.5px;
+    left: 63%;
+    transform: translateX(-50%);
+}
+#perfil4{
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 24.5px;
+    left: 88%;
+    transform: translateX(-50%);
+}
+
+
+#elipse5{
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 200px;
+    left: 12%;
+    transform: translateX(-50%);
+}
+#elipse6{
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 200px;
+    left: 37%;
+    transform: translateX(-50%);
+}
+#elipse7{
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 200px;
+    left: 63%;
+    transform: translateX(-50%);
+}
+#elipse8{
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 200px;
+    left: 88%;
+    transform: translateX(-50%);
+}
+
+#perfil5{
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 204.5px;
+    left: 12%;
+    transform: translateX(-50%);
+}
+#perfil6{
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 204.5px;
+    left: 37%;
+    transform: translateX(-50%);
+}
+#perfil7{
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 204.5px;
+    left: 63%;
+    transform: translateX(-50%);
+}
+#perfil8{
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 204.5px;
+    left: 88%;
+    transform: translateX(-50%);
+}
+
+#alunoa{
+    color: #634CD9;
+    font-family: 'Inder', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 144px;
+    left: 12%;
+    transform: translateX(-50%);
+}
+#alunob{
+    color: #634CD9;
+    font-family: 'Inder', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 144px;
+    left: 37%;
+    transform: translateX(-50%);
+}
+#alunoc{
+    color: #634CD9;
+    font-family: 'Inder', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 144px;
+    left: 63%;
+    transform: translateX(-50%);
+}
+#alunod{
+    color: #634CD9;
+    font-family: 'Inder', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 144px;
+    left: 88%;
+    transform: translateX(-50%);
+}
+
+#alunoe{
+    color: #634CD9;
+    font-family: 'Inder', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 324px;
+    left: 12%;
+    transform: translateX(-50%);
+}
+#alunof{
+    color: #634CD9;
+    font-family: 'Inder', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 324px;
+    left: 37%;
+    transform: translateX(-50%);
+}
+#alunog{
+    color: #634CD9;
+    font-family: 'Inder', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 324px;
+    left: 63%;
+    transform: translateX(-50%);
+}
+#alunoh{
+    color: #634CD9;
+    font-family: 'Inder', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 324px;
+    left: 88%;
+    transform: translateX(-50%);
+}
