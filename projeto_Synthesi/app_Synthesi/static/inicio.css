@@ -1,0 +1,246 @@
+body {
+    background: #0C004D;
+    text-align: center;
+}
+
+#clorofill {
+    width: 720px;
+    height: 190px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 32px; /* Ajustado para 32px do topo da tela */
+    left: 50%; /* Centralizado horizontalmente */
+    transform: translateX(-50%); /* Centralizado horizontalmente */
+}
+
+
+#login {
+    width: 60.9px;
+    height: 29px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 315px;
+    left: 278px;
+}
+
+#cadastro {
+    width: 108.091px;
+    height: 29px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 315px;
+    left: 898px;
+}
+
+#p1 {
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 339px;
+    left: 279px;
+}
+#p2 {
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 339px;
+    left: 898px;
+}
+
+#div1 {
+    width: 398px;
+    height: 289px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    border: 5px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 375px;
+    left: 50%;
+    transform: translateX(-120%); /* Ajustado para 20px à esquerda do centro */ /* Ajustado para centralizar a div1 */
+}
+
+#div2 {
+    width: 399px;
+    height: 289px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    border: 5px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 375px;
+    left: 50%;
+    transform: translateX(+20%); /* Ajustado para 20px à direita do centro */
+}
+
+
+
+
+#emailtxt {
+    width: 62px;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 23px;
+    left: 16px;
+}
+
+#email {
+    width: 349px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #EEECF5;
+    position: absolute;
+    top: 55px;
+    left: 24px;
+}
+
+#senhatxt {
+    width: 62px;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 118px;
+    left: 16px;
+}
+
+#senha {
+    width: 349px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #EEECF5;
+    position: absolute;
+    top: 150px;
+    left: 24px;
+}
+
+#esqueceu {
+    width: 139px;
+    color: #0500FF;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    top: 188px;
+    left: 241px;
+    position: absolute;
+}
+
+#continuar {
+    width: 144px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #8CE264;
+    position: absolute;
+    top: 236px;
+    left: 127px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8CE264;
+}
+
+#continuar::before {
+    content: "Continuar";
+    color: #634CD9; /* Cor do texto dentro do botão */
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#folha {
+    width: 69px;
+    height: 72px;
+    transform: rotate(67.553deg);
+    flex-shrink: 0;
+    position: absolute;
+    left: 1224px;
+    top: 310px;
+}
+
+#elipse{
+    width: 141px;
+    height: 141px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 63px;
+    left: 48px;
+}
+
+#professor{
+    width: 131px;
+    height: 131px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 69px;
+    left: 53px;
+}
+
+#elipse2{
+    width: 141px;
+    height: 141px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 63px;
+    left: 228px;
+}
+
+#gestao{
+    width: 131px;
+    height: 131px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 69px;
+    left: 233px;
+}
+
+#professortxt{
+    width: 99px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 214px;
+    left: 69px;
+}
+#gestaotxt{
+    width: 67px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 214px;
+    left: 260px;
+}

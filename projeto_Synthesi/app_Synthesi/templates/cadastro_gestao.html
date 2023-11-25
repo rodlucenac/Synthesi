@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    {% load static %}
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'cadastro_gestao.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Gestão</title>
+    <link rel="stylesheet" href="cadastro_gestao.css">
 </head>
 <body>
-    <img src="{% static 'clorofill.png' %}" alt="Clorofill">
+    <img src="imgs/clorofill.png" alt="" id="clorofill">
     <p id="p1">Cadastro como Gestão</p>
-    <form action="{% url 'inicio' %}" method="POST">
-        {% csrf_token %}
-        <div id="div">
-            <p id="emailtxt">Email</p>
-            <input type="email" name="" id="email">
-            <p id="senha1txt">Senha</p>
-            <input type="password" name="" id="senha1">
-            <p id="senha2txt">Confirmação de senha</p>
-            <input type="password" name="" id="senha2">
-            <button id="cancelar"></button>
-            <button type="submit" id="continuar"></button>
-        </div>
-    </form>
+    <div id="div">
+        <p id="emailtxt">Email</p>
+        <input type="email" name="" id="email">
+        <p id="senha1txt">Senha</p>
+        <input type="password" name="" id="senha1">
+        <p id="senha2txt">Confirmação de senha</p>
+        <input type="password" name="" id="senha2">
+        <button id="cancelar"></button>
+        <button id="continuar"></button>
+    </div>
 </body>
 </html>
