@@ -1,31 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="atividades.css">
+    <link rel="stylesheet" href="{% static 'atividades.css' %}">
     <title>Document</title>
 </head>
 <body>
-    <img src="imgs/atividadestxt.png" alt="" id="atividades">
-    <img src="imgs/perfil.png" alt="" id="perfil">
-    <img src="imgs/seta.svg" alt="" id="seta">
+    <img src="{% static 'atividadestxt.png' %}" alt="" id="atividades">
+    <img src="{% static 'perfil.png' %}" alt="" id="perfil">
+    <img src="{% static 'seta.svg' %}" alt="" id="seta">
     <p id="alunoa">Aluno A</p>
-    <img src="imgs/elipse.svg" alt="" id="elipse">
-    <img src="imgs/perfil.png" alt="" id="perfil2">
-    <img src="imgs/eliseve_verde.svg" alt="" id="elipse_verde">
-    <img src="imgs/exclamação.png" alt="" id="exclamacao">
+    <img src="{% static 'elipse.svg' %}" alt="" id="elipse">
+    <img src="{% static 'perfil.png' %}" alt="" id="perfil2">
+    <img src="{% static 'eliseve_verde.svg' %}" alt="" id="elipse_verde">
+    <img src="{% static 'exclamação.png' %}" alt="" id="exclamacao">
 
     <div id="divmaterias">
-        <button id="materia1"><img src="imgs/globo.png" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 5%; transform: translateY(-50%); left: 13px;"><p style="width: 106px; color: #FFF; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p></button> 
-        <button id="materia2" style="position: absolute; top: 63px; left: 0px;"><img src="imgs/elipse.svg" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;"><p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p></button>
-        <button id="materia2" style="position: absolute; top: 127px; left: 0px;"><img src="imgs/elipse.svg" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;"><p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p></button>
-        <button id="materia2" style="position: absolute; top: 191px; left: 0px;"><img src="imgs/elipse.svg" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;"><p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p></button>
-        <button id="materia2" style="position: absolute; top: 255px; left: 0px;"><img src="imgs/elipse.svg" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;"><p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p></button>
-        <button id="materia2" style="position: absolute; top: 319px; left: 0px;"><img src="imgs/elipse.svg" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;"><p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p></button>
-        <button id="materia2" style="position: absolute; top: 383px; left: 0px;"><img src="imgs/elipse.svg" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;"><p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p></button>
-        <button id="materia2" style="position: absolute; top: 447px; left: 0px;"><img src="imgs/elipse.svg" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;"><p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p></button>
-        <button id="materia2" style="position: absolute; top: 511px; left: 0px;"><img src="imgs/elipse.svg" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;"><p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p></button>
+        <button id="materia1">
+            <img src="{% static 'globo.png' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 5%; transform: translateY(-50%); left: 13px;">
+            <p style="width: 106px; color: #FFF; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
+        </button> 
+        <button id="materia2" style="position: absolute; top: 63px; left: 0px;">
+            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
+            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
+        </button>
+        <button id="materia2" style="position: absolute; top: 127px; left: 0px;">
+            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
+            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
+        </button>
+        <button id="materia2" style="position: absolute; top: 191px; left: 0px;">
+            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
+            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
+        </button>
+        <button id="materia2" style="position: absolute; top: 255px; left: 0px;">
+            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
+            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
+        </button>
+        <button id="materia2" style="position: absolute; top: 319px; left: 0px;">
+            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
+            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
+        </button>
+        <button id="materia2" style="position: absolute; top: 383px; left: 0px;">
+            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
+            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
+        </button>
+        <button id="materia2" style="position: absolute; top: 447px; left: 0px;">
+            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
+            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
+        </button>
+        <button id="materia2" style="position: absolute; top: 511px; left: 0px;">
+            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
+            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
+        </button>
     </div>
 
     <div id="div2">
@@ -37,15 +65,15 @@
 
     <div id="divpresenca">
         <p id="presencageral">Presença geral</p>
-        <img src="imgs/eliseve_verde.svg" alt="" id="elipse_verde2">
-        <img src="imgs/correto.png" alt="" id="correto">
-        <img src="imgs/elipse_vermelha.svg" alt="" id="elipse_vermelha">
-        <img src="imgs/x.png" alt="" id="x">
+        <img src="{% static 'eliseve_verde.svg' %}" alt="" id="elipse_verde2">
+        <img src="{% static 'correto.png' %}" alt="" id="correto">
+        <img src="{% static 'elipse_vermelha.svg' %}" alt="" id="elipse_vermelha">
+        <img src="{% static 'x.png' %}" alt="" id="x">
     </div>
     <div id="divausencia">
         <p id="ausencia">Ausência em</p>
         <p id="ausencia2">atividade(S):</p>
-        <img src="imgs/elipse_amarela.svg" alt="" id="elipse_amarela">
+        <img src="{% static 'elipse_amarela.svg' %}" alt="" id="elipse_amarela">
     </div>
     <div id="linha"></div>
     <div id="linha2"></div>
@@ -53,9 +81,9 @@
     <div id="divcomparecimento">
         <p id="compdiario">Comparecimento Diário</p>
         <div id="legenda">
-            <img src="imgs/elipse_azul.svg" alt="" id="elipse_legenda" style="position: absolute; top: 13px; ; left: 15px;">
-            <img src="imgs/elipse_lilais.svg" alt="" id="elipse_legenda " style="position: absolute; top: 50%; transform: translateY(-50%); left: 15px;">
-            <img src="imgs/elipse_rosa.svg" alt="" id="elipse_legenda" style="position: absolute; top: 61px; ; left: 15px;">
+            <img src="{% static 'elipse_azul.svg' %}" alt="" id="elipse_legenda" style="position: absolute; top: 13px; ; left: 15px;">
+            <img src="{% static 'elipse_lilais.svg' %}" alt="" id="elipse_legenda " style="position: absolute; top: 50%; transform: translateY(-50%); left: 15px;">
+            <img src="{% static 'elipse_rosa.svg' %}" alt="" id="elipse_legenda" style="position: absolute; top: 61px; ; left: 15px;">
             <p id="legendatxt" style="position: absolute; top: -5px; ; left: 30px;">Presença</p>
             <p id="legendatxt" style="position: absolute; top: 35%; transform: translateY(-50%) ; left: 30px;">Ausência</p>
             <p id="legendatxt" style="position: absolute; top: 61%; transform: translateY(-50%) ; left: 15px;">Falta</p>
@@ -65,8 +93,8 @@
 
     <div id="marcacao">
         <div id="mes">
-            <img src="imgs/seta.svg" alt="" style="position: absolute; top: 50%; transform: translateY(-50%); left: 10px;">
-            <img src="imgs/seta.svg" alt="" style="position: absolute; top: 15%; transform: translateY(-50%); right: 10px; transform: rotate(-180.205deg);" >
+            <img src="{% static 'seta.svg' %}" alt="" style="position: absolute; top: 50%; transform: translateY(-50%); left: 10px;">
+            <img src="{% static 'seta.svg' %}" alt="" style="position: absolute; top: 15%; transform: translateY(-50%); right: 10px; transform: rotate(-180.205deg);" >
         </div>
 
         <button id="marcador" style="position: absolute; top: 108px; left: 35px;"></button>
