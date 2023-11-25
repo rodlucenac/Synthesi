@@ -26,8 +26,5 @@ urlpatterns = [
     path('cadastroProfessor/', views.pagina_cadastro_prof, name='cadastro_professor'),
     path('cadastroGestão/', views.pagina_cadastro_gest, name='cadastro_gestao'),
     path('salas/', views.pagina_salas, name='salas'),
-    path('monitoramento/', views.pagina_monitoramento, name='monitoramento'),
-    path('presenca/', views.pagina_presenca, name='presenca'),
-    path('musica/', views.pagina_musica, name='musica'),
-    path('autoavaliacao/', views.pagina_autoavaliacao, name='autoavaliacao'),    
+    path('Eu e o mundo', views.pagina_eu_mundo, name='eu_mundo')
 ]

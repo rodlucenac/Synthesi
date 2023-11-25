@@ -51,14 +51,5 @@ def pagina_cadastro_gest(request):
 def pagina_salas(request):
     return render(request, 'salas.html')
 
-def pagina_monitoramento(request):
-    return render(request, 'monitoramento.html')
-
-def pagina_presenca(request):
-    return render(request, 'presenca.html')
-
-def pagina_musica(request):
-    return render(request, 'musica.html')
-
-def pagina_autoavaliacao(request):
-    return render(request, 'autoavaliacao.html')
+def pagina_eu_mundo(request):
+    return render(request, 'eu_eo_mundo.html')

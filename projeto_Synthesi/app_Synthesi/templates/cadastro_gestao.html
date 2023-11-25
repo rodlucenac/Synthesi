@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Gestão</title>
-    <link rel="stylesheet" href="static/cadastro_gestao.css">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'cadastro_gestao.css' %}">
 </head>
 <body>
-    <img src="static/clorofill.png" alt="" id="clorofill">
+    <img src="{% static 'clorofill.png' %}" alt="Clorofill">
     <p id="p1">Cadastro como Gestão</p>
     <div id="div">
         <p id="emailtxt">Email</p>
