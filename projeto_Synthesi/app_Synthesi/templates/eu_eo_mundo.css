@@ -355,3 +355,63 @@ body{
     left: 88%;
     transform: translateX(-50%);
 }
+
+#exclamacao1{
+    width: 57px;
+    height: 64px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+#exclamacao2{
+    width: 59px;
+    height: 50px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 84px;
+    left: 15px;
+}
+#exclamacao3{
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 144px;
+    left: 15px;
+}
+
+
+#faltas3{
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: 20px;
+    left: 85px;
+} 
+#faltas2{
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: 86px;
+    left: 85px;
+} 
+#faltas1{
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: 146px;
+    left: 85px;
+} 
