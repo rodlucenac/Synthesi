@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="eu_eo_mundo.css">
+    <link rel="stylesheet" href="{% static 'eu_eo_mundo.css' %}">
     <title>Document</title>
 </head>
 <body>
-    <img src="imgs/eu_eo_mundo.png" alt="" id="eu_eo_mundo">
+    <img src="{% static 'eu_eo_mundo.png' %}" alt="" id="eu_eo_mundo">
     <p id="manha">Manhã</p>
     <input type="search" id="pesquisa">
-    <img src="imgs/Ellipse.png" alt="" id="elipse">
-    <img src="imgs/lupa.png" alt="" id="lupa">
-    <img src="imgs/perfil.png" alt="" id="perfil">
-    <img src="imgs/seta.svg" alt="" id="seta">
+    <img src="{% static 'Ellipse.png' %}" alt="elipse">
+    <img src="{% static 'lupa.png' %}" alt="lupa">
+    <img src="{% static 'perfil.png' %}" alt="perfil">
+    <img src="{% static 'seta.svg' %}" alt="seta">
     <div id="div1">
         <img src="{% static 'elipse.svg' %}" alt="" id="elipse1">
         <img src="{% static 'elipse.svg' %}" alt="" id="elipse2">
