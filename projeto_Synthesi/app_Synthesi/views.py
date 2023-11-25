@@ -5,47 +5,49 @@ from django.contrib import messages
 
 def pagina_inicio(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
-        senha1 = request.POST.get('senha')
-        usuario = authenticate(request, username = username, password = senha1)
-        print(usuario, username, senha1)
+        email = request.POST.get('email')
+        password = request.POST.get('senha')
+        usuario = authenticate(request, email=email, password=password)
         if usuario is not None:
             login(request, usuario)
             return redirect('salas')
         else:
-            messages.error (request, 'Email ou senha incorretos.')
+            messages.error(request, 'Email ou senha incorretos.')
+    else:
+        print("Não é uma requisição POST")
     return render(request, 'inicio.html')
+
 
     
 
 def pagina_cadastro_prof(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
         email = request.POST.get('email')
-        senha1= request.POST.get('senha1')
+        password= request.POST.get('senha1')
         senha2= request.POST.get('senha2')
         
-        if senha1 != senha2:
+        if password != senha2:
             messages.error(request, 'Suas senhas não são iguais.')
         else:
-            meu_usuario = User.objects.create_user(username, email, senha1)
+            meu_usuario = User.objects.create_user(email, password)
             meu_usuario.save()
-            return redirect('login')
+            return redirect('inicio')
     return render(request, 'cadastro_prof.html')
     
 def pagina_cadastro_gest(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
         email = request.POST.get('email')
-        senha1= request.POST.get('senha1')
+        password= request.POST.get('senha1')
         senha2= request.POST.get('senha2')
+        print(email, password, senha2)
         
-        if senha1 != senha2:
+        if password != senha2:
             messages.error(request, 'Suas senhas não são iguais.')
         else:
-            meu_usuario = User.objects.create_user(username, email, senha1)
+            meu_usuario = User.objects.create_user(email, password)
             meu_usuario.save()
-            return redirect('login')
+            print(meu_usuario)
+            return redirect('inicio')
     return render(request, 'cadastro_gestao.html')
 
 def pagina_salas(request):

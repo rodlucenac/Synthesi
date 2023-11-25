@@ -9,15 +9,18 @@
 <body>
     <img src="{% static 'clorofill.png' %}" alt="Clorofill">
     <p id="p1">Cadastro como Gestão</p>
-    <div id="div">
-        <p id="emailtxt">Email</p>
-        <input type="email" name="" id="email">
-        <p id="senha1txt">Senha</p>
-        <input type="password" name="" id="senha1">
-        <p id="senha2txt">Confirmação de senha</p>
-        <input type="password" name="" id="senha2">
-        <button id="cancelar"></button>
-        <button id="continuar"></button>
-    </div>
+    <form action="{% url 'inicio' %}" method="POST">
+        {% csrf_token %}
+        <div id="div">
+            <p id="emailtxt">Email</p>
+            <input type="email" name="" id="email">
+            <p id="senha1txt">Senha</p>
+            <input type="password" name="" id="senha1">
+            <p id="senha2txt">Confirmação de senha</p>
+            <input type="password" name="" id="senha2">
+            <button id="cancelar"></button>
+            <button type="submit" id="continuar"></button>
+        </div>
+    </form>
 </body>
 </html>

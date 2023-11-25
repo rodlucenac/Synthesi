@@ -12,13 +12,19 @@
     <img src="{% static 'login.png' %}" alt="" id="login">
     <p id="p1">Acesse por meio dos seus dados cadastrados</p>
     <form action="{% url 'salas' %}" method="POST">
+        {% csrf_token %}
         <div id="div1">
             <p id="emailtxt">Email</p>
             <input type="email" name="email" id="email">
             <p id="senhatxt">Senha</p>
-            <input type="password" name="" id="senha">
+            <input type="password" name="senha" id="senha">
             <p id="esqueceu">Esqueceu sua senha?</p>
-            <button id="continuar"></button>
+            <button type="submit" id="continuar"></button>
+            {% if errors %}
+                <div class="error-messages">
+                    {{ errors }}
+                </div>
+            {% endif %}
         </div>
     </form>
     <img src="{% static 'cadastro.png' %}" alt="" id="cadastro">
