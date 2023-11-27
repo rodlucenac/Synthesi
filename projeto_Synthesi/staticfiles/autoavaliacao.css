@@ -1,0 +1,403 @@
+body{
+    background: #0C004C;
+    text-align: center;
+}
+
+#atividades{
+    width: 727px;
+    height: 123px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#perfil{
+    width: 71px;
+    height: 71px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 34px;
+    left: 1236px;
+}
+
+#seta{
+    width: 57px;
+    height: 57px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 47px;
+    left: 122px;
+}
+
+#elipse_verde{
+    width: 73px;
+    height: 73px;
+    flex-shrink: 0;
+    fill: #8CE264;
+    position: absolute;
+    top: 191px;
+    left: 243px;
+}
+
+#exclamacao{
+    width: 52px;
+    height: 57px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 197px;
+    left: 254px;
+}
+
+#div2{
+    width: 308px;
+    height: 122px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 238px;
+    left: 317px;
+}
+
+#alunoa{
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 190px;
+    left: 330px;
+}
+
+#p1{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: -10px;
+    left: 9px;
+}
+
+#p2{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 15px;
+    left: 9px;
+}
+
+#p3{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 38px;
+    left: 10px;
+}
+
+#p4{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 65px;
+    left: 10px;
+}
+
+#elipse{
+    width: 190px;
+    height: 190px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 200px;
+    left: 102px;
+}
+
+#perfil2{
+    width: 190px;
+    height: 190px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 200px;
+    left: 102px;
+}
+
+#icone{
+    width: 49px;
+    height: 49px;
+    flex-shrink: 0;
+    position: absolute;  
+    left: 30px;
+}
+#icone2{
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    position: absolute;
+    left: 32px;
+}
+
+#divmaterias{
+    width: 626px;
+    height: 560px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 410px;
+    left: 95px;
+}
+
+#divpresenca{
+    width: 189px;
+    height: 86px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 2px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 410px;
+    left: 800px;
+}
+
+#linha{
+    width: 4px;
+    height: 88px;
+    background: #634CD9;
+    position: absolute;
+    top: 410px;
+    left: 920px;
+}
+#linha2{
+    width: 70px;
+    height: 4px;
+    background: #634CD9;
+    position: absolute;
+    top: 451px;
+    left: 920px;
+}
+
+#elipse_legenda{
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+#presencageral{
+    width: 97px;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    position: absolute;
+    left: 8px;
+}
+
+#elipse_verde2{
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 3px;
+    left: 137px;
+}
+
+#correto{
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 3px;
+    left: 137px;
+}
+
+#elipse_vermelha{
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 48px;
+    left: 137px;
+}
+
+#x{
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 48px;
+    left: 137px;
+}
+
+#divausencia{
+    width: 189px;
+    height: 86px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 2px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 500px;
+    left: 800px;
+}
+
+#ausencia{
+    width: 27px;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: -10px;
+    left: 8px;
+}
+#ausencia2{
+    width: 97px;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    position: absolute;
+    top: 35px;
+    left: 8px;
+}
+
+#elipse_amarela{
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    fill: #FAFF00;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 143px;
+}
+
+#divcomparecimento{
+    width: 399px;
+    height: 269px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 315px;
+    left: 1000px;
+}
+
+#legenda{
+    width: 125px;
+height: 99px;
+flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #8CE264;
+    background: #634CD9;
+    position: absolute;
+    top: 71px;
+    left: 254px;
+}
+
+#compdiario{
+    width: 186px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 214px;
+    left: 10px;
+}
+
+#legendatxt{
+    width: 74px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#marcacao{
+    width: 608px;
+    height: 524px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #8CE264;
+    background: #634CD9;
+    position: absolute;
+    top: 600px;
+    left: 795px;
+}
+
+#mes{
+    width: 407px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #FFF;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#marcador{
+    width: 62px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #FFFF;
+    border: solid #FFFF;
+}
+
+#materia1{
+    width:502px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #634CD9;
+    border: solid #634CD9;
+}
+#materia2{
+    width:503px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFFF;
+    border: solid #634CD9;
+}

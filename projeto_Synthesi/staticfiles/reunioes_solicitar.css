@@ -1,0 +1,409 @@
+body{
+    background: #0C004C;
+    text-align: center;
+}
+
+#atividades{
+    width: 450px;
+    height: 123px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#perfil{
+    width: 71px;
+    height: 71px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 34px;
+    left: 1236px;
+}
+
+#seta{
+    width: 57px;
+    height: 57px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 47px;
+    left: 122px;
+}
+
+#elipse_verde{
+    width: 73px;
+    height: 73px;
+    flex-shrink: 0;
+    fill: #8CE264;
+    position: absolute;
+    top: 191px;
+    left: 243px;
+}
+
+#exclamacao{
+    width: 52px;
+    height: 57px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 197px;
+    left: 254px;
+}
+
+#divdados{
+    width: 308px;
+    height: 122px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 238px;
+    left: 317px;
+}
+
+#alunoa{
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 190px;
+    left: 330px;
+}
+
+#p1{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: -10px;
+    left: 9px;
+}
+
+#p2{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 15px;
+    left: 9px;
+}
+
+#p3{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 38px;
+    left: 10px;
+}
+
+#p4{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 65px;
+    left: 10px;
+}
+
+#elipse{
+    width: 190px;
+    height: 190px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 200px;
+    left: 102px;
+}
+
+#perfil2{
+    width: 190px;
+    height: 190px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 200px;
+    left: 102px;
+}
+
+#datas{
+    width: 503px;
+    height: 452px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #8CE264;
+    background: #634CD9;
+    position: absolute;
+    top: 400px;
+    left: 105px;
+}
+
+#ano{
+    width: 407px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #FFF;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#mes{
+    width: 76px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 1px solid #FFF;
+    background: #FFF;
+    position: absolute;
+}
+
+#mestxt{
+    width: 56px;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+}
+
+#legenda{
+    width: 345px;
+    height: 153px;
+    flex-shrink: 0;
+    border-radius: 31px;
+    border: 5px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    left: 105px;
+    top: 880px;
+}
+
+#exclamacao{
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    position: absolute;
+}
+
+#faltas{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+}
+
+#historico{
+    width: 123px;
+    height: 41px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 3px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 284px;
+    left: 800px;
+}
+
+#historico::before {
+    content: "Histórico";
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+#solicitar{
+    width: 123px;
+    height: 41px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 3px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 284px;
+    left: 940px;
+}
+
+#solicitar::before {
+    content: "Solicitar";
+    color: #8CE264;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#hist_reunioes{
+    width: 608px;
+    height: 528px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 8px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    left: 800px;
+    top: 328px;
+}
+
+
+#reuniao{
+    width: 606px;
+    height: 47px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+}
+
+#reuniaotxt{
+    width: 371px;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    left: -30px;
+    top: 5%;
+    transform: translateY(-50%);
+}
+
+#hora{
+    width: 54px;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    left: 384px;
+    top: 5%;
+    transform: translateY(-50%);
+}
+
+#data{
+    width: 105px;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    left: 474px;
+    top: 5%;
+    transform: translateY(-50%);
+}
+
+#solicitar_reuniao{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    left: 10px;
+}
+
+#corpo{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    left: 10px;
+    top: 75px;
+}
+
+#mensagem_solicitacao{
+    width: 602px;
+    height: 350px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #EEECF5;
+    position: absolute;
+    left: 0px;
+    top: 110px;
+}
+
+#cancelar{
+    width: 155px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 4px solid #8CE264;
+    background: #FFF;
+    position: absolute;
+    top: 479px;
+    left: 251px;
+}
+
+#cancelar::before{
+    content: "Cancelar";
+    width: 155px;
+    height: 40px;
+    flex-shrink: 0;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+#enviar{
+    width: 155px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 4px solid #8CE264;
+    background: #8CE264;
+    position: absolute;
+    top: 479px;
+    left: 427px;
+}
+
+#enviar::before{
+    content: "Enviar";
+    width: 155px;
+    height: 40px;
+    flex-shrink: 0;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
