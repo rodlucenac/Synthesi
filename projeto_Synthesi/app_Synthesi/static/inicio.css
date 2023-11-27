@@ -187,6 +187,7 @@ body {
     position: absolute;
     top: 63px;
     left: 48px;
+    border-radius: 120px;
 }
 
 #professor{
@@ -205,6 +206,7 @@ body {
     position: absolute;
     top: 63px;
     left: 228px;
+    border-radius: 120px;
 }
 
 #gestao{

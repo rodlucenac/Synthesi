@@ -17,8 +17,14 @@
         <input type="password" name="" id="senha1">
         <p id="senha2txt">Confirmação de senha</p>
         <input type="password" name="" id="senha2">
-        <button id="cancelar"></button>
-        <button id="continuar"></button>
+        <form action="{% url 'inicio' %}">
+          <a href="{% url 'inicio' %}"> <button type="button" id="cancelar"></button></a> 
+        </form>
+        <form action="{% url 'salas' %}">
+          <a href="{% url 'salas' %}"> <button type="button" id="continuar"></button></a> 
+        </form>
+       
+        
     </div>
 </body>
 </html>

@@ -16,18 +16,29 @@
         <input type="email" name="" id="email">
         <p id="senhatxt">Senha</p>
         <input type="password" name="" id="senha">
-        <p id="esqueceu">Esqueceu sua senha?</p>
+            <p id="esqueceu">Esqueceu sua senha?</p>
         <button id="continuar"></button>
     </div>
     <img src="{%static 'cadastro.png' %}" alt="" id="cadastro">
     <p id="p2">Selecione uma opção e registre seus dados</p>
     <img src="{% static 'folha.png' %}" alt="" id="folha">
     <div id="div2">
-        <img src="{% static 'Ellipse.png' %}" alt="" id="elipse">
-        <img src="{% static 'professor.png' %}" alt="" id="professor">
+        <form action="{% url 'cadastrop' %}">
+            <a href="{% url 'cadastrop' %}">
+                <button type="button" id="elipse" style="background-color: #634CD9; border: solid #634CD9;">
+                </button>
+                <img src="{% static 'professor.png' %}" alt="" id="professor">
+            </a>
+        </form>
+        
         <p id="professortxt">PROFESSOR</p>
-        <img src="{% static 'Ellipse.png' %}" alt="" id="elipse2">
-        <img src="{% static 'gestao.png' %}" alt="" id="gestao">
+        <form action="{% url 'cadastrog' %}">
+            <a href="{% url 'cadastrog' %}">
+                <button type="button" id="elipse2" style="background-color: #634CD9; border: solid #634CD9;">
+                </button>
+                <img src="{% static 'gestao.png' %}" alt="" id="gestao">
+            </a>
+        </form>
         <p id="gestaotxt">GESTÃO</p>
     </div>
 </body>

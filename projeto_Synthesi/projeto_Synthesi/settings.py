@@ -60,6 +60,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app_Synthesi',
     "whitenoise.runserver_nostatic",
+
+
 ]
 
 MIDDLEWARE = [
