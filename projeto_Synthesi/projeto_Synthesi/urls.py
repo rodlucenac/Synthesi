@@ -15,4 +15,4 @@ urlpatterns = [
     path('presenca/', views.pagina_presenca, name='presenca'),
     path('musica/', views.pagina_musica, name='musica'),
     path('autoavaliacao/', views.pagina_autoavaliacao, name='autoavaliacao'),    
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
