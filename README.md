@@ -54,7 +54,3 @@ https://www.figma.com/file/9GkTWKgWARocBmZTHAsLpY/Untitled?type=design&node-id=5
 ### Screencast dos testes automatizados:
 
 paste here
-
-### Screencast do CI/CD
-
-paste here
