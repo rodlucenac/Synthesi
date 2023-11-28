@@ -12,16 +12,18 @@
     <p id="p1">Cadastro como Professor</p>
     <div id="div">
         <p id="emailtxt">Email</p>
-        <input type="email" name="" id="email">
+        <input type="text" name="username" id="email">
         <p id="senha1txt">Senha</p>
         <input type="password" name="" id="senha1">
         <p id="senha2txt">Confirmação de senha</p>
         <input type="password" name="" id="senha2">
         <form action="{% url 'inicio' %}">
-          <a href="{% url 'inicio' %}"> <button type="button" id="cancelar"></button></a> 
+          <button type="button" id="cancelar"></button>
         </form>
-        <form action="{% url 'salas' %}">
-          <a href="{% url 'salas' %}"> <button type="button" id="continuar"></button></a> 
+        <form action="{% url 'inicio' %}">
+          <a href="{% url 'inicio' %}">
+            <button type="button" id="continuar"></button> 
+          </a>
         </form>
        
         

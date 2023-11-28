@@ -246,3 +246,20 @@ body {
     top: 214px;
     left: 260px;
 }
+
+ul.messages {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+ul.messages li.error {
+    background-color: #FFCCCC;
+    border: 1px solid #FF0000;
+    color: #FF0000;
+    margin-top: -200px;
+    margin-left: 380px;
+    width: 190px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}

@@ -12,13 +12,15 @@
     <p id="p1">Cadastro como Gestão</p>
     <div id="div">
         <p id="emailtxt">Email</p>
-        <input type="email" name="" id="email">
+        <input type="text" name="username" id="email">
         <p id="senha1txt">Senha</p>
-        <input type="password" name="" id="senha1">
+        <input type="password" name="senha1" id="senha1">
         <p id="senha2txt">Confirmação de senha</p>
-        <input type="password" name="" id="senha2">
-        <button id="cancelar"></button>
-        <button id="continuar"></button>
+        <input type="password" name="senha2" id="senha2">
+        <form action="{% url 'inicio' %}">
+            <button id="cancelar"></button>
+            <button id="continuar"></button>
+        </form>
     </div>
 </body>
 </html>

@@ -33,6 +33,7 @@ body {
     position: absolute;
     top: 27px;
     left: 97px;
+    border-radius: 120px;
 }
 #elipse2{
     width: 184px;
@@ -41,6 +42,7 @@ body {
     position: absolute;
     top: 27px;
     left: 472px;
+    border-radius: 120px;
 }
 #elipse3{
     width: 184px;
@@ -49,6 +51,7 @@ body {
     position: absolute;
     top: 284px;
     left: 97px;
+    border-radius: 120px;
 }
 #elipse4{
     width: 184px;
@@ -57,6 +60,7 @@ body {
     position: absolute;
     top: 284px;
     left: 472px;
+    border-radius: 120px;
 }
 
 #icn1{

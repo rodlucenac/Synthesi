@@ -11,34 +11,48 @@
     <img src="{% static 'clorofill.png' %}" alt="" id="clorofill">
     <img src="{% static 'login.png' %}" alt="" id="login">
     <p id="p1">Acesse por meio dos seus dados cadastrados</p>
-    <div id="div1">
-        <p id="emailtxt">Email</p>
-        <input type="email" name="" id="email">
-        <p id="senhatxt">Senha</p>
-        <input type="password" name="" id="senha">
-            <p id="esqueceu">Esqueceu sua senha?</p>
-        <button id="continuar"></button>
-    </div>
+    
+        {% csrf_token %}
+        <div id="div1">
+            <p id="emailtxt">Email</p>
+            <input type="text" name="email" id="email">
+            <p id="senhatxt">Senha</p>
+            <input type="password" name="senha" id="senha">
+                <p id="esqueceu">Esqueceu sua senha?</p>
+                    <a href="{% url 'salas' %}">
+                        <button id="continuar"></button>
+                    </a>
+                
+            
+        </div>
+        
+ 
+    {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    
     <img src="{%static 'cadastro.png' %}" alt="" id="cadastro">
     <p id="p2">Selecione uma opção e registre seus dados</p>
     <img src="{% static 'folha.png' %}" alt="" id="folha">
     <div id="div2">
-        <form action="{% url 'cadastrop' %}">
             <a href="{% url 'cadastrop' %}">
                 <button type="button" id="elipse" style="background-color: #634CD9; border: solid #634CD9;">
                 </button>
                 <img src="{% static 'professor.png' %}" alt="" id="professor">
             </a>
-        </form>
         
         <p id="professortxt">PROFESSOR</p>
-        <form action="{% url 'cadastrog' %}">
+
             <a href="{% url 'cadastrog' %}">
                 <button type="button" id="elipse2" style="background-color: #634CD9; border: solid #634CD9;">
                 </button>
                 <img src="{% static 'gestao.png' %}" alt="" id="gestao">
             </a>
-        </form>
+
         <p id="gestaotxt">GESTÃO</p>
     </div>
 </body>
