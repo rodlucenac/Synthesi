@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.shortcuts import render, redirect
+from .models import Alunos
 
 def pagina_inicio(request):
     if request.method == 'POST':
@@ -66,4 +67,22 @@ def pagina_autoavaliacao(request):
     return render(request, 'autoavaliacao.html')
 
 def pagina_eueomundo(request):
-    return render(request, 'eu_eo_mundo.html')
+    alunos = Alunos.objects.all()  # Obtém todos os alunos do banco de dados
+    return render(request, 'eu_eo_mundo.html', {'alunos': alunos})
+
+def pagina_adicionar(request):
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        turma = request.POST.get('turma')
+        idade = request.POST.get('idade')
+
+        novo_aluno = Alunos(nome= nome, turma=turma, idade=idade)
+        print(nome, turma, idade)
+        novo_aluno.save()
+        return redirect('salas')
+    
+    
+    return render(request, 'adicionar.html')
+
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Professor</title>
+    <link rel="stylesheet" href="{% static 'adicionar.css' %}">
+</head>
+<body>
+    <img src="{% static 'clorofill.png' %}" alt="" id="clorofill">
+    <p id="p1">Cadastro como Professor</p>
+    <form action="{% url 'adicionar' %}" method="POST">
+        {% csrf_token %}
+        <div id="div">
+            <p id="emailtxt">Nome</p>
+            <input type="text" name="nome" id="email">
+            <p id="senha1txt">Turma</p>
+            <input type="text" name="turma" id="senha1">
+            <p id="senha2txt">Idade</p>
+            <input type="number" name="idade" id="senha2">
+            <button type="button" id="cancelar"></button>
+            <button type="submit" id="continuar"></button> 
+        </div>
+    </form>
+    
+</body>
+</html>

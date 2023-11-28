@@ -11,6 +11,7 @@ urlpatterns = [
     path('cadastro_gerstao/', views.pagina_cadastrog, name='cadastrog'),
     path('eu_eo_mundo/', views.pagina_eueomundo, name='eu_eo_mundo'),
     path('salas/', views.pagina_salas, name='salas'),
+    path('adicionar/', views.pagina_adicionar, name='adicionar'),
     path('monitoramento/', views.pagina_monitoramento, name='monitoramento'),
     path('presenca/', views.pagina_presenca, name='presenca'),
     path('musica/', views.pagina_musica, name='musica'),

@@ -258,7 +258,7 @@ body{
     transform: translateX(-50%);
 }
 
-#alunoa{
+#aluno1{
     color: #634CD9;
     font-family: 'Inder', sans-serif;
     font-size: 18px;
@@ -270,7 +270,7 @@ body{
     left: 12%;
     transform: translateX(-50%);
 }
-#alunob{
+#aluno3{
     color: #634CD9;
     font-family: 'Inder', sans-serif;
     font-size: 18px;
@@ -282,7 +282,7 @@ body{
     left: 37%;
     transform: translateX(-50%);
 }
-#alunoc{
+#aluno4{
     color: #634CD9;
     font-family: 'Inder', sans-serif;
     font-size: 18px;
@@ -294,7 +294,7 @@ body{
     left: 63%;
     transform: translateX(-50%);
 }
-#alunod{
+#aluno5{
     color: #634CD9;
     font-family: 'Inder', sans-serif;
     font-size: 18px;
@@ -307,7 +307,7 @@ body{
     transform: translateX(-50%);
 }
 
-#alunoe{
+#aluno6{
     color: #634CD9;
     font-family: 'Inder', sans-serif;
     font-size: 18px;
@@ -319,7 +319,7 @@ body{
     left: 12%;
     transform: translateX(-50%);
 }
-#alunof{
+#aluno7{
     color: #634CD9;
     font-family: 'Inder', sans-serif;
     font-size: 18px;
@@ -331,7 +331,7 @@ body{
     left: 37%;
     transform: translateX(-50%);
 }
-#alunog{
+#aluno8{
     color: #634CD9;
     font-family: 'Inder', sans-serif;
     font-size: 18px;
@@ -415,3 +415,21 @@ body{
     top: 146px;
     left: 85px;
 } 
+
+#mais{
+    width: 59px;
+    height: 59px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 874px;
+    left: 975px;
+}
+#menos{
+    width: 59px;
+    height: 59px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 874px;
+    left: 975px;
+
+}

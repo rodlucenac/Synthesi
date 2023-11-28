@@ -1,72 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'eu_eo_mundo.css' %}">
     <title>Document</title>
 </head>
 <body>
-<<<<<<< Updated upstream
     <img src="{% static 'eu_eo_mundo.png' %}" alt="" id="eu_eo_mundo">
-=======
-    <img src="eu_eo_mundo.png" alt="" id="eu_eo_mundo">
->>>>>>> Stashed changes
     <p id="manha">Manhã</p>
     <input type="search" id="pesquisa">
-    <img src="{% static 'Ellipse.png' %}" alt="elipse">
-    <img src="{% static 'lupa.png' %}" alt="lupa">
-    <img src="{% static 'perfil.png' %}" alt="perfil">
-    <img src="{% static 'seta.svg' %}" alt="seta">
-    <div id="div1">
-        <img src="{% static 'elipse.svg' %}" alt="" id="elipse1">
-        <img src="{% static 'elipse.svg' %}" alt="" id="elipse2">
-        <img src="{% static 'elipse.svg' %}" alt="" id="elipse3">
-        <img src="{% static 'elipse.svg' %}" alt="" id="elipse4">
-        <img src="{% static 'perfil.png' %}" alt="" id="perfil1">
-        <img src="{% static 'perfil.png' %}" alt="" id="perfil2">
-        <img src="{% static 'perfil.png' %}" alt="" id="perfil3">
-        <img src="{% static 'perfil.png' %}" alt="" id="perfil4">
+    <img src="{% static 'Ellipse.png' %}" alt="" id="elipse">
+    <img src="{% static 'lupa.png' %}" alt="" id="lupa">
+    <img src="{% static 'perfil.png' %}" alt="" id="perfil">
+    <img src="{% static 'seta.svg' %}" alt="" id="seta">
+    <a href="{% url 'adicionar' %}">
+        <img src="{% static 'mais.png' %}" alt="" id="mais" style="position: absolute; top: 914px; left: 975px;">
+    </a>
+    <img src="{% static 'menos.svg' %}" alt="" id="menos" style="position: absolute; top: 914px; left: 1045px;">
+   <div id="div1">
+    {% for aluno in alunos %}
+        <img src="{% static 'elipse.svg' %}" alt="" id="elipse{{ forloop.counter }}">
+        <img src="{% static 'perfil.png' %}" alt="" id="perfil{{ forloop.counter }}">
+        <p id="aluno{{ forloop.counter }}" style="color: #634CD9; font-family: 'Inder', sans-serif; font-size: 18px; font-style: normal; font-weight: 700; line-height: normal; text-align: center; position: absolute; top: 150px; padding-left: 20px;">{{ aluno.nome }}</p>
+    {% endfor %}
+</div>
 
-        <p id="alunoa" >Aluno A</p>
-        <p id="alunob" >Aluno B</p>
-        <p id="alunoc" >Aluno C</p>
-        <p id="alunod" >Aluno D</p>
-
-        
-        <img src="{% static 'elipse.svg' %}" alt="" id="elipse5">
-        <img src="{% static 'elipse.svg' %}" alt="" id="elipse6">
-        <img src="{% static 'elipse.svg' %}" alt="" id="elipse7">
-        <img src="{% static 'elipse.svg' %}" alt="" id="elipse8">
-        <img src="{% static 'perfil.png' %}" alt="" id="perfil5">
-        <img src="{% static 'perfil.png' %}" alt="" id="perfil6">
-        <img src="{% static 'perfil.png' %}" alt="" id="perfil7">
-        <img src="{% static 'perfil.png' %}" alt="" id="perfil8">
-
-        <p id="alunoe" >Aluno E</p>
-        <p id="alunof" >Aluno F</p>
-        <p id="alunog" >Aluno G</p>
-        <p id="alunoh" >Aluno H</p>
-
-
-    </div>
     
     <div id="div2">
-<<<<<<< Updated upstream
         <img src="{% static 'exclamação.png' %}" alt="" id="exclamacao1">
         <img src="{% static 'excalamacao2.svg' %}" alt="" id="exclamacao2">
         <img src="{% static 'exclamacao3.png' %}" alt="" id="exclamacao3">
 
-=======
-        <img src="{% static 'imgs/exclamacao.png' %}" alt="" id="exclamacao1">
-        <img src="{% static 'imgs/exclamacao2.svg' %}" alt="" id="exclamacao2">
-        <img src="{% static 'imgs/exclamacao3.png' %}" alt="" id="exclamacao3">
-    
->>>>>>> Stashed changes
         <p id="faltas3">3 Faltas</p>
         <p id="faltas2">3 Faltas</p>
         <p id="faltas1">3 Faltas</p>
     </div>
-    </body>
-    </html>
-    
+</body>
+</html>
