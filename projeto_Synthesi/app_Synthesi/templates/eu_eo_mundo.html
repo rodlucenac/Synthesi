@@ -21,8 +21,10 @@
     <img src="{% static 'menos.svg' %}" alt="" id="menos" style="position: absolute; top: 914px; left: 1045px;">
    <div id="div1">
     {% for aluno in alunos %}
+    <a href="{% url 'monitoramento' aluno.nome aluno.turma aluno.idade %}">
         <img src="{% static 'elipse.svg' %}" alt="" id="elipse{{ forloop.counter }}">
         <img src="{% static 'perfil.png' %}" alt="" id="perfil{{ forloop.counter }}">
+    </a>
         <p id="aluno{{ forloop.counter }}" style="color: #634CD9; font-family: 'Inder', sans-serif; font-size: 18px; font-style: normal; font-weight: 700; line-height: normal; text-align: center; position: absolute; top: 150px; padding-left: 20px;">{{ aluno.nome }}</p>
     {% endfor %}
 </div>

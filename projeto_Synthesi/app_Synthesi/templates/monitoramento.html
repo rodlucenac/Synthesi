@@ -8,17 +8,22 @@
     <title>Document</title>
 </head>
 <body>
+    {% block content %}
     <img src="{% static 'monitoramento.png' %}" alt="" id="monitoramento">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil">
     <img src="{% static 'seta.svg' %}" alt="" id="seta">
-    <p id="alunoa">Aluno A</p>
+    
+    <p id="alunoa">Nome: {{ nome }}</p>
+
     <img src="{% static 'elipse.svg' %}" alt="" id="elipse">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil2">
     <img src="{% static 'eliseve_verde.svg' %}" alt="" id="elipse_verde">
     <img src="{% static 'exclamação.png' %}" alt="" id="exclamacao">
     <div id="div1">
-        <img src="{% static 'elipse.svg' %}" alt="" id="elipseatv">
-        <img src="{% static 'atividades.png' %}" alt="" id="atividades">
+        <a href="{% url 'atividades' nome=nome turma=turma idade=idade %}">
+            <img src="{% static 'elipse.svg' %}" alt="" id="elipseatv">
+            <img src="{% static 'atividades.png' %}" alt="" id="atividades">
+        </a>
         <img src="{% static 'elipse.svg' %}" alt="" id="elipseatv2">
         <img src="{% static 'autoavaliacao.png' %}" alt="" id="autoavaliacao">
         <img src="{% static 'elipse.svg' %}" alt="" id="elipseatv3">
@@ -29,14 +34,13 @@
         <p id="reunioestxt">Reuniões</p>
     </div>
     <div id="div2">
-        <p id="p1">Sala: 1</p>
+        <p id="p1">Sala: {{ turma }}</p>
         <p id="p2">Turno: Manhã</p>
-        <p id="p3">Idade: X</p>
+        <p id="p3">Idade: {{ idade }}</p>
         <p id="p4">Responsáveis: A e B</p>
     </div>
 
 
-</body>
-</html>
+    	{% endblock %}
 </body>
 </html>

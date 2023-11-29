@@ -8,10 +8,11 @@
     <title>Document</title>
 </head>
 <body>
+    {% block content %}
     <img src="{% static 'atividadestxt.png' %}" alt="" id="atividades">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil">
     <img src="{% static 'seta.svg' %}" alt="" id="seta">
-    <p id="alunoa">Aluno A</p>
+    <p id="alunoa">Nome: {{ nome }}</p>
     <img src="{% static 'elipse.svg' %}" alt="" id="elipse">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil2">
     <img src="{% static 'eliseve_verde.svg' %}" alt="" id="elipse_verde">
@@ -57,9 +58,9 @@
     </div>
 
     <div id="div2">
-        <p id="p1">Sala: 1</p>
+        <p id="p1">Sala: {{ turma }}</p>
         <p id="p2">Turno: Manhã</p>
-        <p id="p3">Idade: X</p>
+        <p id="p3">Idade:  {{ idade }}</p>
         <p id="p4">Responsáveis: A e B</p>
     </div>
 
@@ -138,5 +139,6 @@
 
 
     </div>
+    {% endblock %}
 </body>
 </html>
