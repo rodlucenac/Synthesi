@@ -24,10 +24,15 @@
             <img src="{% static 'elipse.svg' %}" alt="" id="elipseatv">
             <img src="{% static 'atividades.png' %}" alt="" id="atividades">
         </a>
-        <img src="{% static 'elipse.svg' %}" alt="" id="elipseatv2">
-        <img src="{% static 'autoavaliacao.png' %}" alt="" id="autoavaliacao">
+        <a href="{% url 'autoavaliacao' nome=nome turma=turma idade=idade %}">
+            <img src="{% static 'elipse.svg' %}" alt="" id="elipseatv2">
+            <img src="{% static 'autoavaliacao.png' %}" alt="" id="autoavaliacao">
+        </a>
+        <a href="{% url 'reunioes' nome=nome turma=turma idade=idade %}">
         <img src="{% static 'elipse.svg' %}" alt="" id="elipseatv3">
         <img src="{% static 'reunioes.png' %}" alt="" id="reunioes">
+       </a>
+       
 
         <p id="atividadetxt">Atividades</p>
         <p id="autoavaliacaotxt">autoavaliação</p>

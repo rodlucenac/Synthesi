@@ -355,13 +355,27 @@ body{
     transform: translateX(-50%);
 }
 
-#marcador{
-    width: 62px;
-    height: 64px;
+#marcador {
+    width: 18px;
+    height: 19px;
     flex-shrink: 0;
-    border-radius: 5px;
-    background: #FFFF;
-    border: solid #FFFF;
+    border: 3px solid #0C004C;
+    background: #FFF;
+    position: absolute;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 #materia1{

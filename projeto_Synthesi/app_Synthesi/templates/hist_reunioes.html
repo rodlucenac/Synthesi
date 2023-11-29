@@ -7,9 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'reunioes.css' %}">
     <title>Document</title>
+    <!-- Adicione este script ao cabeçalho do seu HTML -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </head>
 
 <body>
+    {% block content %}
     <img src="{% static 'reunioestxt.png' %}" alt="" id="atividades">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil">
     <img src="{% static 'seta.svg' %}" alt="" id="seta">
@@ -133,5 +137,6 @@
 
 
     </div>
+    {% endblock %}
 </body>
 </html>
