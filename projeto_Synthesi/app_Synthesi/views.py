@@ -4,7 +4,16 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from .models import Alunos, Materias, Solicitacao
+from django.http import JsonResponse
 
+def atualizar_cor(request, aluno_id):
+    if request.method == 'POST' and request.is_ajax():
+        cor = request.POST.get('cor', '#FFFFFF')
+        aluno = Alunos.objects.get(id=aluno_id)
+        aluno.cor = cor
+        aluno.save()
+        return JsonResponse({'success': True})
+    return JsonResponse({'success': False})
 
 def pagina_inicio(request):
     if request.method == 'POST':
@@ -100,6 +109,7 @@ def pagina_solicitar(request, nome=None, turma=None, idade=None):
         context = {'nome': nome, 'turma': turma, 'idade': idade}
         return render(request, 'solicitar_reunioes.html', context)
 
+
 def pagina_reunioes(request, nome=None, turma=None, idade=None):
     if nome is None or turma is None or idade is None:
         # Se os argumentos não foram fornecidos, você pode buscar essas informações de outra forma.
@@ -112,6 +122,7 @@ def pagina_reunioes(request, nome=None, turma=None, idade=None):
     context = {'nome': nome, 'turma': turma, 'idade': idade}
     return render(request, 'hist_reunioes.html', context)
 
+
 def pagina_atividades(request, nome=None, turma=None, idade=None):
     if nome is None or turma is None or idade is None:
         # Se os argumentos não foram fornecidos, você pode buscar essas informações de outra forma.
@@ -121,7 +132,8 @@ def pagina_atividades(request, nome=None, turma=None, idade=None):
         turma = "Turma Padrão"
         idade = 10
 
-    context = {'nome': nome, 'turma': turma, 'idade': idade}
+    alunos = Alunos.objects.all()
+    context = {'nome': nome, 'turma': turma, 'idade': idade, 'alunos':alunos}
     return render(request, 'atividades.html', context)
 
 def pagina_eueomundo(request):

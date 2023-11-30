@@ -9,6 +9,7 @@ class Alunos(models.Model):
     nome = models.TextField(max_length=255)
     turma = models.TextField(max_length=255)
     idade = models.CharField(max_length=100)
+    cor = models.CharField(max_length=7, default="#FFFFFF")
 
 class Materias(models.Model):
     materia = models.TextField(max_length=255)
