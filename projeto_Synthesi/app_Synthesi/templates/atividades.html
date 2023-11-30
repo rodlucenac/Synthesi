@@ -411,7 +411,9 @@ color: white;
     {% block content %}
     <img src="{% static 'atividadestxt.png' %}" alt="" id="atividades">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil">
-    <img src="{% static 'seta.svg' %}" alt="" id="seta">
+    <a href="{% url 'monitoramento' %}">
+        <img src="{% static 'seta.svg' %}" alt="" id="seta">
+    </a>
     <p id="alunoa">Nome: {{ nome }}</p>
     <img src="{% static 'elipse.svg' %}" alt="" id="elipse">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil2">

@@ -16,7 +16,9 @@
     {% block content %}
     <img src="{% static 'reunioestxt.png' %}" alt="" id="atividades">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil">
-    <img src="{% static 'seta.svg' %}" alt="" id="seta">
+    <a href="{% url 'monitoramento' %}">
+        <img src="{% static 'seta.svg' %}" alt="" id="seta">
+    </a>
     <p id="alunoa">Aluno A</p>
     <img src="{% static 'elipse.svg' %}" alt="" id="elipse">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil2">

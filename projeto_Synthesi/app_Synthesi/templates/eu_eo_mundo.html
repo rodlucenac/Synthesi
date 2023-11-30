@@ -14,7 +14,9 @@
     <img src="{% static 'Ellipse.png' %}" alt="" id="elipse">
     <img src="{% static 'lupa.png' %}" alt="" id="lupa">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil">
-    <img src="{% static 'seta.svg' %}" alt="" id="seta">
+    <a href="{% url 'salas' %}">
+        <img src="{% static 'seta.svg' %}" alt="" id="seta">
+    </a>
     <a href="{% url 'adicionar' %}">
         <img src="{% static 'mais.png' %}" alt="" id="mais" style="position: absolute; top: 914px; left: 975px;">
     </a>

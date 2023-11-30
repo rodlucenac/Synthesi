@@ -11,8 +11,9 @@
     {% block content %}
     <img src="{% static 'monitoramento.png' %}" alt="" id="monitoramento">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil">
-    <img src="{% static 'seta.svg' %}" alt="" id="seta">
-    
+    <a href="{% url 'eu_eo_mundo' %}">
+        <img src="{% static 'seta.svg' %}" alt="" id="seta">
+    </a>    
     <p id="alunoa">Nome: {{ nome }}</p>
 
     <img src="{% static 'elipse.svg' %}" alt="" id="elipse">
