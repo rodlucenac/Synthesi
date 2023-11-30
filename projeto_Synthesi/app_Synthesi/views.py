@@ -138,7 +138,6 @@ from .models import Aluno  # Certifique-se de que a importação do modelo está
 def pagina_adicionar(request):
     if request.method == 'POST':
         try:
-            # Captura os dados do formulário
             nome = request.POST.get('nome')
             idade = request.POST.get('idade')
             cpf = request.POST.get('cpf')
