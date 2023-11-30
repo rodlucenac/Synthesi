@@ -503,65 +503,21 @@ color: white;
             <img src="{% static 'seta.svg' %}" alt="" style="position: absolute; top: 15%; transform: translateY(-50%); right: 10px; transform: rotate(-180.205deg);" >
         </div>
     
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 35px;">{{ aluno.cor }}{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 115px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 195px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 275px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 355px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 435px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 515px;">{{ color_state }}</div>
-    
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 35px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 115px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 195px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 275px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 355px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 435px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 515px;">{{ color_state }}</div>
-    
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 35px; ">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 115px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 195px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 275px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 355px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 435px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 515px;">{{ color_state }}</div>
-    
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 35px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 115px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 195px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 275px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 355px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 435px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 515px;">{{ color_state }}</div>
-    
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 428px; left: 35px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 428px; left: 115px;">{{ color_state }}</div>
+        <form action="{% url 'atividades' nome=nome turma=turma idade=idade %}" method="POST">
+            {% csrf_token %}
+            <label for="dataInput" >Informe a data:</label>
+            <input name="data"  type="date" id="dataInput" required >
+            
+            <!-- Adicione botões para Presença e Falta -->
+            <button name="presente" type="submit">Presença</button>
+            <button name="faltou" type="submit">Falta</button>
+        </form>
+        
     
         <div style="width: 18px; height: 19px; flex-shrink: 0; border: 3px solid #0C004C; background: #FFF; position: absolute; top: 478px; left: 507px;"></div>
         <p style="width: 52px; color: #FFF; font-family:'Inter', sans-serif; font-size: 20px; font-style: normal; font-weight: 700; position: absolute; top: 455px; left: 527px;">Hoje</p>
     </div>
     
-
-    <script>
-        // JavaScript para alternar as cores
-        function changeColor(button) {
-            // Determina a próxima cor com base na cor atual
-            var currentColor = button.style.backgroundColor;
-            var nextColor = '';
-    
-            if (currentColor === 'rgb(255, 255, 255)' || currentColor === '') {
-                nextColor = 'rgb(255, 0, 0)'; // Vermelho
-            } else if (currentColor === 'rgb(255, 0, 0)') {
-                nextColor = 'rgb(0, 0, 255)'; // Azul
-            } else {
-                nextColor = 'rgb(255, 255, 255)'; // Branco
-            }
-    
-            // Define a nova cor
-            button.style.backgroundColor = nextColor;
-        }
-    </script>
     
     {% endblock %}
 </body>

@@ -2,9 +2,11 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.shortcuts import render, redirect
-from .models import Alunos, Materias, Solicitacao
+from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
+from .models import Alunos, Materias, Solicitacao, Presenca
 from django.http import JsonResponse
+import json
+
 
 def atualizar_cor(request, aluno_id):
     if request.method == 'POST' and request.is_ajax():
@@ -122,18 +124,44 @@ def pagina_reunioes(request, nome=None, turma=None, idade=None):
     context = {'nome': nome, 'turma': turma, 'idade': idade}
     return render(request, 'hist_reunioes.html', context)
 
-
 def pagina_atividades(request, nome=None, turma=None, idade=None):
     if nome is None or turma is None or idade is None:
         # Se os argumentos não foram fornecidos, você pode buscar essas informações de outra forma.
         # Por exemplo, você pode buscar essas informações do banco de dados ou usar dados padrão.
-        # Aqui estou apenas dando um exemplo fixo, ajuste conforme necessário.
         nome = "Aluno Padrão"
         turma = "Turma Padrão"
         idade = 10
+    
+    if request.method == 'POST':
+        data = request.POST.get('data')
+    
+        if 'presente' in request.POST:
+            presenca = 'PRESENTE'
+        elif 'faltou' in request.POST:
+            presenca = 'FALTOU'
+        else:
+            # Lógica de tratamento caso nenhum botão tenha sido pressionado
+            presenca = None
+
+        if nome and data and presenca:
+            # Obtenha todos os objetos aluno com base no nome
+            alunos = Alunos.objects.filter(nome=nome)
+
+            # Verifique se há exatamente um objeto retornado
+            if alunos.count() == 1:
+                aluno = alunos.first()
+
+                # Crie uma nova instância do modelo Presenca e salve no banco de dados
+                nova_presenca = Presenca(nome_aluno=aluno.nome, data=data, presenca=presenca)
+                nova_presenca.save()
+                return redirect('eu_eo_mundo')
+            else:
+                # Lógica para lidar com mais de um objeto retornado (se necessário)
+                pass
 
     alunos = Alunos.objects.all()
-    context = {'nome': nome, 'turma': turma, 'idade': idade, 'alunos':alunos}
+    materias = Materias.objects.all()
+    context = {'nome': nome, 'turma': turma, 'idade': idade, 'alunos': alunos, 'materias': materias}
     return render(request, 'atividades.html', context)
 
 def pagina_eueomundo(request):
@@ -176,9 +204,27 @@ def pagina_adicionarmateria(request):
     return render(request, 'adicionar_materias.html')
 
 
+def marcar_presenca(request, nome = None):
+    
+    data = request.POST.get('data')
+    
+    if 'presente' in request.POST:
+        presenca = 'PRESENTE'
+        # Se o botão "Faltou" for pressionado
+    elif 'faltou' in request.POST:
+        presenca = 'FALTOU'
+    else:
+        # Lógica de tratamento caso nenhum botão tenha sido pressionado
+        presenca = None
 
+    if nome and data and presenca:
+        # Obtenha o objeto aluno com base no nome (ajuste conforme necessário)
+        aluno = get_object_or_404(Alunos, nome=nome)
 
+        # Crie uma nova instância do modelo Presenca e salve no banco de dados
+        nova_presenca = Presenca(nome_aluno=aluno.nome, data=data, presenca=presenca)
+        nova_presenca.save()
+        return redirect('eu_eo_mundo')
+        
 
-
-
-
+        

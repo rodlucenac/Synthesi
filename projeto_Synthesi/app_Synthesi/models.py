@@ -18,3 +18,9 @@ class Solicitacao(models.Model):
     msg = models.TextField(max_length=255)
 
 
+class Presenca(models.Model):
+    nome = models.CharField(max_length=255)
+    data = models.DateField()
+    presenca = models.TextField(max_length=255)
+
+
