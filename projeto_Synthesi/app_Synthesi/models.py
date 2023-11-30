@@ -12,10 +12,13 @@ class Materias(models.Model):
     materia = models.TextField(max_length=255)
 class Solicitacao(models.Model):
     msg = models.TextField(max_length=255)
+    nome = models.TextField(max_length=255)
+    
 class Presenca(models.Model):
     nome = models.CharField(max_length=255)
     data = models.DateField()
     presenca = models.TextField(max_length=255)
 
 class Opcao(models.Model):
+    opc = models.CharField(max_length=20)
     nome = models.CharField(max_length=20)

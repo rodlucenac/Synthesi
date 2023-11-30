@@ -16,19 +16,19 @@
     {% block content %}
     <img src="{% static 'reunioestxt.png' %}" alt="" id="atividades">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil">
-    <a href="{% url 'monitoramento' %}">
+    <a href="{% url 'monitoramento' nome=nome turma=turma idade=idade %}">
         <img src="{% static 'seta.svg' %}" alt="" id="seta">
     </a>
-    <p id="alunoa">Aluno A</p>
+    <p id="alunoa">Nome: {{ nome }}</p>
     <img src="{% static 'elipse.svg' %}" alt="" id="elipse">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil2">
     <img src="{% static 'elipse_verde.svg' %}" alt="" id="elipse_verde">
     <img src="{% static 'exclamação.png' %}" alt="" id="exclamacao">
 
     <div id="divdados">
-        <p id="p1">Sala: 1</p>
+        <p id="p1">Sala: {{ turma }} </p>
         <p id="p2">Turno: Manhã</p>
-        <p id="p3">Idade: X</p>
+        <p id="p3">Idade: {{ idade }}</p>
         <p id="p4">Responsáveis: A e B</p>
     </div>
 
@@ -83,6 +83,16 @@
         <button id="solicitar"></button>
     </a>
     <div id="hist_reunioes">
+        
+        {% for sol in solicitacao %}
+        <div id="reuniao" >
+            <p id="reuniaotxt">Reunião do aluno {{ sol.nome }}</p>
+            <p id="hora">XX:XX</p>
+            <p id="data">XX/XX/XXXX</p>
+        </div>
+        {% endfor %}
+            
+            
         <div id="reuniao" >
             <p id="reuniaotxt">--------------------------------------</p>
             <p id="hora">XX:XX</p>

@@ -405,17 +405,27 @@
 background-color: #4CAF50; /* ou a cor desejada */
 color: white;
 }
+
+#enviar{
+    width: 115px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 4px solid #8CE264;
+    background: #8CE264;
+    margin-right: 40px;
+    margin-top: 10px;
+}
     </style>
 </head>
 <body>
     {% block content %}
     <img src="{% static 'atividadestxt.png' %}" alt="" id="atividades">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil">
-    <a href="{% url 'monitoramento' %}">
+    <a href="{% url 'monitoramento' nome=nome turma=turma idade=idade %}">
         <img src="{% static 'seta.svg' %}" alt="" id="seta">
     </a>
     <p id="alunoa">Nome: {{ nome }}</p>
-    <img src="{% static 'elipse.svg' %}" alt="" id="elipse">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil2">
     <img src="{% static 'eliseve_verde.svg' %}" alt="" id="elipse_verde">
     <img src="{% static 'exclamação.png' %}" alt="" id="exclamacao">
@@ -424,7 +434,7 @@ color: white;
         
         {% for materia in materias %}
         <div id="materia2">
-            <p style="width: 106px; color: blueviolet; font-family: 'Inter', sans-serif; font-size: 36px; font-style: normal; font-weight: 700; line-height: normal; position: absolute; padding-bottom: 15px;">{{ materia.materia }}</p>
+            <p style=" width: 90px; color: blueviolet; font-family: 'Inter', sans-serif; font-size: 27px; font-style: normal; font-weight: 700; line-height: normal; position: absolute; padding-bottom: 35px; text-align: left; padding-left: 6px;">{{ materia.materia }}</p>
         </div> 
         {% endfor %}
             
@@ -478,12 +488,12 @@ color: white;
     
         <form action="{% url 'atividades' nome=nome turma=turma idade=idade %}" method="POST">
             {% csrf_token %}
-            <label for="dataInput" style="position: absolute; top: 50%; left: 30%; transform: translate(-50% -50%);">Informe a data:</label>
-            <input name="data" style="position: absolute; top: 60%; left: 30%; transform: translate(-50% -50%);" type="date" id="dataInput" required >
+            <label for="dataInput" style="position: absolute; top: 25%; left: 0%; transform: translate(-50% -50%); font-family: 'Inter', sans-serif; color: #FFF; width: 100%; font-size: 25px;">Informe a data:</label>
+            <input name="data" style="position: absolute; top: 40%; left: 40%; transform: translate(-50% -50%);" type="date" id="dataInput" required >
             
             <!-- Adicione botões para Presença e Falta -->
-            <button name="presente" type="submit" style="position: absolute; top: 70%; left: 30%; transform: translate(-50% -50%);">Presença</button>
-            <button name="faltou" type="submit" style="position: absolute; top: 70%; left: 50%; transform: translate(-50% -50%);">Falta</button>
+            <button  id="enviar" name="presente" type="submit" style="position: absolute; top: 50%; left: 30%; transform: translate(-50% -50%);">Presença</button>
+            <button id="enviar" name="faltou" type="submit" style="position: absolute; top: 50%; left: 50%; transform: translate(-50% -50%);">Falta</button>
         </form>
         
     

@@ -438,7 +438,7 @@ color: white;
     <a href="{% url 'monitoramento' nome=nome turma=turma idade=idade %}">
         <img src="{% static 'seta.svg' %}" alt="" id="seta">
     </a>
-    <p id="alunoa">Aluno A</p>
+    <p id="alunoa">Nome: {{ nome }}</p>
     <img src="{% static 'elipse.svg' %}" alt="" id="elipse">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil2">
     <img src="{% static 'elipse_verde.svg' %}" alt="" id="elipse_verde">
@@ -483,9 +483,9 @@ color: white;
     </div>
 
     <div id="div2">
-        <p id="p1">Sala: 1</p>
+        <p id="p1">Sala: {{ turma }}</p>
         <p id="p2">Turno: Manhã</p>
-        <p id="p3">Idade: X</p>
+        <p id="p3">Idade: {{ idade }}</p>
         <p id="p4">Responsáveis: A e B</p>
     </div>
 
@@ -533,13 +533,14 @@ color: white;
                 style="position: absolute; top: 15%; transform: translateY(-50%); right: 10px; transform: rotate(-180.205deg);">
         </div>
 
-        <form method="POST" action="{% url 'autoavaliacao' nome=nome turma=turma idade=idade %}">
+    
+        <form method="POST" action="{% url 'autoavaliacao' nome=nome turma=turma idade=idade %}" style="position: absolute; top: 50%; left: 0%; transform: translate(-50% -50%); width: 100%;">
             {% csrf_token %}
             
-            <button type="submit" name="opcao" value="excelente">Excelente</button>
-            <button type="submit" name="opcao" value="bom">Bom</button>
-            <button type="submit" name="opcao" value="a_desejar">A desejar</button>
-            <button type="submit" name="opcao" value="nao_avaliado">O aluno não se autoavaliou</button>
+            <button  id="enviar" type="submit" name="opcao" value="excelente">Excelente</button>
+            <button style="background-color: yellow; border: solid yellow;" id="enviar" type="submit" name="opcao" value="bom">Bom</button>
+            <button style="background-color: red; border: solid red;" id="enviar" type="submit" name="opcao" value="a_desejar">A desejar</button>
+            <button style="background-color: gray; border: solid gray;" id="enviar" type="submit" name="opcao" value="nao_avaliado">O aluno não se autoavaliou</button>
         </form>
         
 

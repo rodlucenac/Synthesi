@@ -13,6 +13,18 @@ body{
     transform: translateX(-50%);
 }
 
+#enviar{
+    width: 155px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 4px solid #8CE264;
+    background: #8CE264;
+    margin-top: 10px;
+}
+
+
+
 
 #perfil{
     width: 71px;

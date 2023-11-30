@@ -64,6 +64,7 @@ def pagina_presenca(request):
     return render(request, 'presenca.html')
 def pagina_musica(request):
     return render(request, 'musica.html')
+
 def pagina_autoavaliacao(request, nome=None, turma=None, idade=None):
     if nome is None or turma is None or idade is None:
         # Se os argumentos não foram fornecidos, você pode buscar essas informações de outra forma.
@@ -75,17 +76,25 @@ def pagina_autoavaliacao(request, nome=None, turma=None, idade=None):
     context = {'nome': nome, 'turma': turma, 'idade': idade}
 
     if request.method == 'POST':
-        opcao_nome = request.POST.get('opcao')
-        opcao = Opcao.objects.create(nome=opcao_nome)
+        opc = request.POST.get('opcao')
+        opcao = Opcao.objects.create(opc=opc, nome=nome)
         opcao.save()
         return redirect('monitoramento', nome=nome, turma=turma, idade=idade)
     print(nome, turma, idade)
     return render(request, 'autoavaliacao.html', context)
 
 def pagina_solicitar(request, nome=None, turma=None, idade=None):
+    if nome is None or turma is None or idade is None:
+        # Se os argumentos não foram fornecidos, você pode buscar essas informações de outra forma.
+        # Por exemplo, você pode buscar essas informações do banco de dados ou usar dados padrão.
+        nome = "Aluno Padrão"
+        turma = "Turma Padrão"
+        idade = 10
+    
+    
     if request.method == 'POST':
         msg = request.POST.get('msg')
-        nova_msg = Solicitacao(msg=msg)
+        nova_msg = Solicitacao(msg=msg, nome=nome)
         print(msg)
         nova_msg.save()
         context = {'nome': nome, 'turma': turma, 'idade': idade}
