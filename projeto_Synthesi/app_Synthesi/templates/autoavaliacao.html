@@ -435,7 +435,7 @@ color: white;
     {% block content %}
     <img src="{% static 'autoavaliacaotxt.png' %}" alt="" id="atividades">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil">
-    <a href="{% url 'monitoramento' %}">
+    <a href="{% url 'monitoramento' nome=nome turma=turma idade=idade %}">
         <img src="{% static 'seta.svg' %}" alt="" id="seta">
     </a>
     <p id="alunoa">Aluno A</p>

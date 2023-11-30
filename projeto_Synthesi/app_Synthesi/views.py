@@ -68,18 +68,18 @@ def pagina_autoavaliacao(request, nome=None, turma=None, idade=None):
     if nome is None or turma is None or idade is None:
         # Se os argumentos não foram fornecidos, você pode buscar essas informações de outra forma.
         # Por exemplo, você pode buscar essas informações do banco de dados ou usar dados padrão.
-        # Aqui estou apenas dando um exemplo fixo, ajuste conforme necessário.
         nome = "Aluno Padrão"
         turma = "Turma Padrão"
         idade = 10
+
+    context = {'nome': nome, 'turma': turma, 'idade': idade}
 
     if request.method == 'POST':
         opcao_nome = request.POST.get('opcao')
         opcao = Opcao.objects.create(nome=opcao_nome)
         opcao.save()
-        return redirect('monitoramento')  # Redirecione para uma página de sucesso ou qualquer outra página desejada
+        return redirect('monitoramento', nome=nome, turma=turma, idade=idade)
     print(nome, turma, idade)
-    context = {'nome': nome, 'turma': turma, 'idade': idade}
     return render(request, 'autoavaliacao.html', context)
 
 def pagina_solicitar(request, nome=None, turma=None, idade=None):
