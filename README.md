@@ -53,7 +53,8 @@ https://www.figma.com/file/9GkTWKgWARocBmZTHAsLpY/Untitled?type=design&node-id=5
 
 ### Diagrama de atividades atualizado:
 
-paste here
+![image](https://github.com/rodlucenac/Synthesi/assets/133917236/c2955831-9153-4943-96f0-1b835e3d1520)
+
 
 ### Screencast dos testes automatizados:
 
