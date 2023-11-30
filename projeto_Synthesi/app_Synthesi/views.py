@@ -5,7 +5,8 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from .models import Aluno, Materias, Solicitacao
 from .models import Alunos, Materias, Solicitacao
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
+
 
 def atualizar_cor(request, aluno_id):
     if request.method == 'POST' and request.is_ajax():
@@ -131,9 +132,6 @@ def pagina_eueomundo(request):
         aluno.top = 150 + (i // 4) * 200
         aluno.left = 20 + (i % 4) * 200
     return render(request, 'eu_eo_mundo.html', {'alunos': alunos})
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from .models import Aluno  # Certifique-se de que a importação do modelo está correta
 
 def pagina_adicionar(request):
     if request.method == 'POST':
