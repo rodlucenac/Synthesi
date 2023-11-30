@@ -45,7 +45,8 @@ https://github.com/rodlucenac/Synthesi/assets/133917236/e4ef6ba5-19ac-44cf-abba-
 
 ### Storyboard 📝
 
-![image](https://github.com/rodlucenac/Synthesi/assets/133917236/c4da3c8b-f9cb-49d6-9bda-5fd6ae4057da)
+![image](https://github.com/rodlucenac/Synthesi/assets/129711995/965a2059-af13-49de-b9f8-f1f37e8382e8)
+
 
 ### Link das telas dos prototipos de média fidelidade: 
 
