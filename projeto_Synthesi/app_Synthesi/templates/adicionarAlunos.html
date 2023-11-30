@@ -163,7 +163,7 @@ flex-shrink: 0;
 </head>
 <body>
     <img src="{% static 'clorofill.png' %}" alt="" id="clorofill">
-    <p id="p1">Cadastro como Professor</p>
+    <p id="p1">Adicionar aluno</p>
     <form action="{% url 'adicionar' %}" method="POST">
         {% csrf_token %}
         <div id="div">

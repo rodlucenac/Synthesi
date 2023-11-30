@@ -9,7 +9,7 @@
 </head>
 <body>
     <img src="{% static 'clorofill.png' %}" alt="" id="clorofill">
-    <p id="p1">Cadastro de Matéria</p>
+    <p id="p1">Adicionar materia</p>
     <form action="{% url 'adicionar_materia' %}" method="POST">
         {% csrf_token %}
         <div id="div">
