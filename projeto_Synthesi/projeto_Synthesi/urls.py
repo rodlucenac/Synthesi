@@ -19,10 +19,6 @@ urlpatterns = [
     path('solicitar/<str:nome>/<str:turma>/<str:idade>/', views.pagina_solicitar, name='solicitar'),
     path('reunioes/<str:nome>/<str:turma>/<str:idade>/', views.pagina_reunioes, name='reunioes'),
     path('atividades/<str:nome>/<str:turma>/<str:idade>/', views.pagina_atividades, name='atividades'),
-<<<<<<< HEAD
     path('autoavaliacao/<str:nome>/<str:turma>/<str:idade>/', views.pagina_autoavaliacao, name='autoavaliacao'),    
     path('marcar_presenca/', views.marcar_presenca, name='marcar_presenca'),
-=======
-    path('autoavaliacao/<str:nome>/<str:turma>/<str:idade>/', views.pagina_autoavaliacao, name='autoavaliacao'),  
->>>>>>> 03fd60a277cd3da323dce1c10279d8e6d3bedf8b
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
