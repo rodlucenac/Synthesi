@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.shortcuts import render, redirect
-from .models import Alunos, Materias, Solicitacao
+from .models import Aluno, Materias, Solicitacao
 
 
 def pagina_inicio(request):
@@ -68,9 +68,6 @@ def pagina_musica(request):
 
 def pagina_autoavaliacao(request, nome=None, turma=None, idade=None):
     if nome is None or turma is None or idade is None:
-        # Se os argumentos não foram fornecidos, você pode buscar essas informações de outra forma.
-        # Por exemplo, você pode buscar essas informações do banco de dados ou usar dados padrão.
-        # Aqui estou apenas dando um exemplo fixo, ajuste conforme necessário.
         nome = "Aluno Padrão"
         turma = "Turma Padrão"
         idade = 10
@@ -90,9 +87,6 @@ def pagina_solicitar(request, nome=None, turma=None, idade=None):
         return render(request, 'hist_reunioes.html', context)
     else:
         if nome is None or turma is None or idade is None:
-            # Se os argumentos não foram fornecidos, você pode buscar essas informações de outra forma.
-            # Por exemplo, você pode buscar essas informações do banco de dados ou usar dados padrão.
-            # Aqui estou apenas dando um exemplo fixo, ajuste conforme necessário.
             nome = "Aluno Padrão"
             turma = "Turma Padrão"
             idade = 10
@@ -102,9 +96,6 @@ def pagina_solicitar(request, nome=None, turma=None, idade=None):
 
 def pagina_reunioes(request, nome=None, turma=None, idade=None):
     if nome is None or turma is None or idade is None:
-        # Se os argumentos não foram fornecidos, você pode buscar essas informações de outra forma.
-        # Por exemplo, você pode buscar essas informações do banco de dados ou usar dados padrão.
-        # Aqui estou apenas dando um exemplo fixo, ajuste conforme necessário.
         nome = "Aluno Padrão"
         turma = "Turma Padrão"
         idade = 10
@@ -114,9 +105,6 @@ def pagina_reunioes(request, nome=None, turma=None, idade=None):
 
 def pagina_atividades(request, nome=None, turma=None, idade=None):
     if nome is None or turma is None or idade is None:
-        # Se os argumentos não foram fornecidos, você pode buscar essas informações de outra forma.
-        # Por exemplo, você pode buscar essas informações do banco de dados ou usar dados padrão.
-        # Aqui estou apenas dando um exemplo fixo, ajuste conforme necessário.
         nome = "Aluno Padrão"
         turma = "Turma Padrão"
         idade = 10
@@ -125,25 +113,32 @@ def pagina_atividades(request, nome=None, turma=None, idade=None):
     return render(request, 'atividades.html', context)
 
 def pagina_eueomundo(request):
-    alunos = Alunos.objects.all() 
+    alunos = Aluno.objects.all() 
     for i, aluno in enumerate(alunos):
-        aluno.top = 150 + (i // 4) * 200  # Ajuste os valores conforme necessário
-        aluno.left = 20 + (i % 4) * 200   # Ajuste os valores conforme necessário 
+        aluno.top = 150 + (i // 4) * 200
+        aluno.left = 20 + (i % 4) * 200
     return render(request, 'eu_eo_mundo.html', {'alunos': alunos})
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from .models import Aluno  # Certifique-se de que a importação do modelo está correta
 
 def pagina_adicionar(request):
     if request.method == 'POST':
-        nome = request.POST.get('nome')
-        turma = request.POST.get('turma')
-        idade = request.POST.get('idade')
-
-        novo_aluno = Alunos(nome= nome, turma=turma, idade=idade)
-        print(nome, turma, idade)
-        novo_aluno.save()
-        return redirect('salas')
-    
-    
-    return render(request, 'adicionar.html')
+        try:
+            # Captura os dados do formulário
+            nome = request.POST.get('nome')
+            idade = request.POST.get('idade')
+            cpf = request.POST.get('cpf')
+            rh = request.POST.get('rh')
+            end = request.POST.get('end')
+            respons = request.POST.get('respons')
+            contato = request.POST.get('contato')
+            novo_aluno = Aluno(nome=nome, idade=idade, cpf=cpf, rh=rh, end=end, respons=respons, contato=contato)
+            novo_aluno.save()
+            return redirect('salas')
+        except Exception as e:
+            return HttpResponse(f"Ocorreu um erro: {e}", status=500)
+    return render(request, 'adicionarAlunos.html')
 
 
 
