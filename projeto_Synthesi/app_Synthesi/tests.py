@@ -96,35 +96,42 @@ class MyForm(forms.Form):
 
 
 class SalasPageTest(TestCase):
-    def test_a_salas(self):
-        browser.get("http://127.0.0.1:8000/salas/")
-        time.sleep(2)
-        browser.find_element(By.ID, "icn1").click()
-        time.sleep(2)
-        assert browser.current_url == "http://127.0.0.1:8000/eu_eo_mundo/"
-    
+
+
+    def test_a_alunos(self):
+        browser.get("http://127.0.0.1:8000/adicionar/")
+        browser.find_element(By.ID, "email").send_keys(password)
+        time.sleep(5)
+        browser.find_element(By.ID, "senha1").send_keys(password)
+        time.sleep(5)
+        browser.find_element(By.ID, "senha2").send_keys(password)
+        time.sleep(5)
+        browser.find_element(By.ID, "enviar").click()
+        time.sleep(4)
+        assert browser.current_url == ("http://127.0.0.1:8000/eu_eo_mundo/")
+        time.sleep(5)
     
     def test_b_atividades(self):
         browser.get("http://127.0.0.1:8000/monitoramento/messi/manha/8/")
-        time.sleep(3)
+        time.sleep(5)
         browser.find_element(By.ID, "autoavaliacao").click()
-        time.sleep(3)
+        time.sleep(10)
         browser.find_element(By.ID, "enviar").click()
-        time.sleep(2)
+        time.sleep(3)
         assert browser.current_url == ("http://127.0.0.1:8000/monitoramento/messi/manha/8/")
     
     
-    def test_c_autoavaliacao(self):
+    def test_c_reunioes(self):
         browser.get("http://127.0.0.1:8000/monitoramento/messi/manha/8/")
-        time.sleep(3)
+        time.sleep(6)
         browser.find_element(By.ID, "reunioes").click()
-        time.sleep(3)
+        time.sleep(6)
         browser.find_element(By.ID, "solicitar").click()
-        time.sleep(2)
+        time.sleep(6)
         browser.find_element(By.ID, "mensagem_solicitacao").send_keys(password)
-        time.sleep(2)
+        time.sleep(6)
         browser.find_element(By.ID, "enviar").click()
-        time.sleep(2)
+        time.sleep(6)
     
         assert browser.current_url == "http://127.0.0.1:8000/solicitar/messi/manha/8/"
 

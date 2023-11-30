@@ -22,7 +22,7 @@
     </a>
     <img src="{% static 'menos.svg' %}" alt="" id="menos" style="position: absolute; top: 914px; left: 1045px;">
    <div id="div1">
-    {% for aluno in alunos %}
+    {% for aluno in Alunos %}
     <a href="{% url 'monitoramento' aluno.nome aluno.turma aluno.idade %}">
         <img src="{% static 'elipse.svg' %}" alt="" id="elipse{{ forloop.counter }}">
         <img src="{% static 'perfil.png' %}" alt="" id="perfil{{ forloop.counter }}">
