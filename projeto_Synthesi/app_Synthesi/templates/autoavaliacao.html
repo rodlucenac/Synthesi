@@ -531,41 +531,15 @@ color: white;
                 style="position: absolute; top: 15%; transform: translateY(-50%); right: 10px; transform: rotate(-180.205deg);">
         </div>
 
+        <form method="POST" action="{% url 'autoavaliacao' nome=nome turma=turma idade=idade %}">
+            {% csrf_token %}
+            
+            <button type="submit" name="opcao" value="excelente">Excelente</button>
+            <button type="submit" name="opcao" value="bom">Bom</button>
+            <button type="submit" name="opcao" value="a_desejar">A desejar</button>
+            <button type="submit" name="opcao" value="nao_avaliado">O aluno não se autoavaliou</button>
+        </form>
         
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 35px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 115px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 195px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 275px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 355px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 435px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 515px;">{{ color_state }}</div>
-    
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 35px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 115px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 195px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 275px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 355px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 435px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 515px;">{{ color_state }}</div>
-    
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 35px; ">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 115px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 195px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 275px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 355px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 435px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 515px;">{{ color_state }}</div>
-    
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 35px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 115px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 195px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 275px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 355px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 435px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 515px;">{{ color_state }}</div>
-    
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 428px; left: 35px;">{{ color_state }}</div>
-        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 428px; left: 115px;">{{ color_state }}</div>
 
 
         <button

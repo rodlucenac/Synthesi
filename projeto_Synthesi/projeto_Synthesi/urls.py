@@ -3,7 +3,6 @@ from django.urls import path
 from app_Synthesi import views
 from django.conf import settings
 from django.conf.urls.static import static
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.pagina_inicio, name='inicio'),
@@ -14,11 +13,9 @@ urlpatterns = [
     path('adicionar/', views.pagina_adicionar, name='adicionar'),
     path('adicionar_materia/', views.pagina_adicionarmateria, name='adicionar_materia'),
     path('monitoramento/<str:nome>/<str:turma>/<str:idade>/', views.pagina_monitoramento, name='monitoramento'),
-    path('presenca/', views.pagina_presenca, name='presenca'),
-    path('musica/', views.pagina_musica, name='musica'),
     path('solicitar/<str:nome>/<str:turma>/<str:idade>/', views.pagina_solicitar, name='solicitar'),
     path('reunioes/<str:nome>/<str:turma>/<str:idade>/', views.pagina_reunioes, name='reunioes'),
     path('atividades/<str:nome>/<str:turma>/<str:idade>/', views.pagina_atividades, name='atividades'),
     path('autoavaliacao/<str:nome>/<str:turma>/<str:idade>/', views.pagina_autoavaliacao, name='autoavaliacao'),    
-    path('marcar_presenca/', views.marcar_presenca, name='marcar_presenca'),
+    path('marcar_presenca/', views.pagina_presenca, name='marcar_presenca'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

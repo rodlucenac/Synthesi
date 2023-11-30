@@ -419,42 +419,13 @@ color: white;
     <img src="{% static 'exclamação.png' %}" alt="" id="exclamacao">
 
     <div id="divmaterias">
-        <button id="materia1">
-            <img src="{% static 'globo.png' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 5%; transform: translateY(-50%); left: 13px;">
-            <p style="width: 106px; color: #FFF; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
-        </button> 
-        <button id="materia2" style="position: absolute; top: 63px; left: 0px;">
-            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
-            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
-        </button>
-        <button id="materia2" style="position: absolute; top: 127px; left: 0px;">
-            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
-            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
-        </button>
-        <button id="materia2" style="position: absolute; top: 191px; left: 0px;">
-            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
-            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
-        </button>
-        <button id="materia2" style="position: absolute; top: 255px; left: 0px;">
-            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
-            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
-        </button>
-        <button id="materia2" style="position: absolute; top: 319px; left: 0px;">
-            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
-            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
-        </button>
-        <button id="materia2" style="position: absolute; top: 383px; left: 0px;">
-            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
-            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
-        </button>
-        <button id="materia2" style="position: absolute; top: 447px; left: 0px;">
-            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
-            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
-        </button>
-        <button id="materia2" style="position: absolute; top: 511px; left: 0px;">
-            <img src="{% static 'elipse.svg' %}" alt="" style="width: 14px; height: 15px; flex-shrink: 0; position: absolute ; top: 50%; transform: translateY(-50%); left: 13px;">
-            <p style="width: 106px; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px;font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: -25px; left: 30px;">Geral</p>
-        </button>
+        
+        {% for materia in materias %}
+        <div id="materia2">
+            <p style="width: 106px; color: blueviolet; font-family: 'Inter', sans-serif; font-size: 36px; font-style: normal; font-weight: 700; line-height: normal; position: absolute; padding-bottom: 15px;">{{ materia.materia }}</p>
+        </div> 
+        {% endfor %}
+            
     </div>
 
     <a href="{% url 'adicionar_materia' %}">
@@ -505,12 +476,12 @@ color: white;
     
         <form action="{% url 'atividades' nome=nome turma=turma idade=idade %}" method="POST">
             {% csrf_token %}
-            <label for="dataInput" >Informe a data:</label>
-            <input name="data"  type="date" id="dataInput" required >
+            <label for="dataInput" style="position: absolute; top: 50%; left: 30%; transform: translate(-50% -50%);">Informe a data:</label>
+            <input name="data" style="position: absolute; top: 60%; left: 30%; transform: translate(-50% -50%);" type="date" id="dataInput" required >
             
             <!-- Adicione botões para Presença e Falta -->
-            <button name="presente" type="submit">Presença</button>
-            <button name="faltou" type="submit">Falta</button>
+            <button name="presente" type="submit" style="position: absolute; top: 70%; left: 30%; transform: translate(-50% -50%);">Presença</button>
+            <button name="faltou" type="submit" style="position: absolute; top: 70%; left: 50%; transform: translate(-50% -50%);">Falta</button>
         </form>
         
     

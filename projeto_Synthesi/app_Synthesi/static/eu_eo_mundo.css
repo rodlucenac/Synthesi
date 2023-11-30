@@ -2,7 +2,6 @@ body{
     background: #0C004C;
     text-align: center;
 }
-
 #eu_eo_mundo{
     width: 693px;
     height: 123px;
@@ -12,7 +11,6 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
-
 #manha{
     width: 107px;
     height: 39px;
@@ -28,7 +26,6 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
-
 #pesquisa{
     width: 280px;
     height: 42px;
@@ -40,9 +37,7 @@ body{
     top: 246px;
     left: 63%;
     transform: translateX(-50%);
-
 }
-
 #elipse{
     width: 32px;
     height: 32px;
@@ -52,7 +47,6 @@ body{
     top: 251px;
     left: 820px;
 }
-
 #lupa{
     width: 32px;
     height: 32px;
@@ -62,7 +56,6 @@ body{
     top: 251px;
     left: 820px;
 }
-
 #perfil{
     width: 71px;
     height: 71px;
@@ -71,7 +64,6 @@ body{
     top: 34px;
     left: 1236px;
 }
-
 #seta{
     width: 57px;
     height: 57px;
@@ -80,9 +72,6 @@ body{
     top: 47px;
     left: 122px;
 }
-
-
-
 #div1{
     width: 700px;
     height: 607px;
@@ -95,7 +84,6 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
-
 #div2{
     width: 168px;
     height: 221px;
@@ -108,7 +96,6 @@ body{
     left: 20%;
     transform: translateX(-50%);
 }
-
 #elipse1{
     width: 140px;
     height: 140px;
@@ -145,7 +132,6 @@ body{
     left: 88%;
     transform: translateX(-50%);
 }
-
 #perfil1{
     width: 130px;
     height: 130px;
@@ -182,8 +168,6 @@ body{
     left: 88%;
     transform: translateX(-50%);
 }
-
-
 #elipse5{
     width: 140px;
     height: 140px;
@@ -220,7 +204,6 @@ body{
     left: 88%;
     transform: translateX(-50%);
 }
-
 #perfil5{
     width: 130px;
     height: 130px;
@@ -257,7 +240,6 @@ body{
     left: 88%;
     transform: translateX(-50%);
 }
-
 #aluno1{
     color: #634CD9;
     font-family: 'Inder', sans-serif;
@@ -306,7 +288,6 @@ body{
     left: 88%;
     transform: translateX(-50%);
 }
-
 #aluno6{
     color: #634CD9;
     font-family: 'Inder', sans-serif;
@@ -355,7 +336,6 @@ body{
     left: 88%;
     transform: translateX(-50%);
 }
-
 #exclamacao1{
     width: 57px;
     height: 64px;
@@ -380,8 +360,6 @@ body{
     top: 144px;
     left: 15px;
 }
-
-
 #faltas3{
     color: #000;
     font-family: 'Inter', sans-serif;
@@ -415,7 +393,6 @@ body{
     top: 146px;
     left: 85px;
 } 
-
 #mais{
     width: 59px;
     height: 59px;
@@ -431,5 +408,4 @@ body{
     position: absolute;
     top: 874px;
     left: 975px;
-
 }
