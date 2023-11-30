@@ -51,6 +51,11 @@ https://github.com/rodlucenac/Synthesi/assets/133917236/e4ef6ba5-19ac-44cf-abba-
 
 https://www.figma.com/file/9GkTWKgWARocBmZTHAsLpY/Untitled?type=design&node-id=5%3A145&mode=design&t=ZrFD0GFzmijHiTrs-1
 
+### Diagrama de atividades atualizado:
+
+![image](https://github.com/rodlucenac/Synthesi/assets/133917236/c2955831-9153-4943-96f0-1b835e3d1520)
+
+
 ### Screencast dos testes automatizados:
 
 paste here
