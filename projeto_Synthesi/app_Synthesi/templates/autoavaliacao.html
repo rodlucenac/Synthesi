@@ -1,12 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'autoavaliacao.css' %}">
     <title>Document</title>
+
+
+    <style>
+        body{
+    background: #0C004C;
+    text-align: center;
+}
+
+#atividades{
+    width: 727px;
+    height: 123px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#perfil{
+    width: 71px;
+    height: 71px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 34px;
+    left: 1236px;
+}
+
+#seta{
+    width: 57px;
+    height: 57px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 47px;
+    left: 122px;
+}
+
+#elipse_verde{
+    width: 73px;
+    height: 73px;
+    flex-shrink: 0;
+    fill: #8CE264;
+    position: absolute;
+    top: 191px;
+    left: 243px;
+}
+
+#exclamacao{
+    width: 52px;
+    height: 57px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 197px;
+    left: 254px;
+}
+
+#div2{
+    width: 308px;
+    height: 122px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 238px;
+    left: 317px;
+}
+
+#alunoa{
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 190px;
+    left: 330px;
+}
+
+#p1{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: -10px;
+    left: 9px;
+}
+
+#p2{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 15px;
+    left: 9px;
+}
+
+#p3{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 38px;
+    left: 10px;
+}
+
+#p4{
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 65px;
+    left: 10px;
+}
+
+#elipse{
+    width: 190px;
+    height: 190px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 200px;
+    left: 102px;
+}
+
+#perfil2{
+    width: 190px;
+    height: 190px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 200px;
+    left: 102px;
+}
+
+#icone{
+    width: 49px;
+    height: 49px;
+    flex-shrink: 0;
+    position: absolute;  
+    left: 30px;
+}
+#icone2{
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    position: absolute;
+    left: 32px;
+}
+
+#divmaterias{
+    width: 626px;
+    height: 560px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 410px;
+    left: 95px;
+}
+
+#divpresenca{
+    width: 189px;
+    height: 86px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 2px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 410px;
+    left: 800px;
+}
+
+#linha{
+    width: 4px;
+    height: 88px;
+    background: #634CD9;
+    position: absolute;
+    top: 410px;
+    left: 920px;
+}
+#linha2{
+    width: 70px;
+    height: 4px;
+    background: #634CD9;
+    position: absolute;
+    top: 451px;
+    left: 920px;
+}
+
+#elipse_legenda{
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+#presencageral{
+    width: 97px;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    position: absolute;
+    left: 8px;
+}
+
+#elipse_verde2{
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 3px;
+    left: 137px;
+}
+
+#correto{
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 3px;
+    left: 137px;
+}
+
+#elipse_vermelha{
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 48px;
+    left: 137px;
+}
+
+#x{
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 48px;
+    left: 137px;
+}
+
+#divausencia{
+    width: 189px;
+    height: 86px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 2px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 500px;
+    left: 800px;
+}
+
+#ausencia{
+    width: 27px;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: -10px;
+    left: 8px;
+}
+#ausencia2{
+    width: 97px;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    position: absolute;
+    top: 35px;
+    left: 8px;
+}
+
+#elipse_amarela{
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    fill: #FAFF00;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 143px;
+}
+
+#divcomparecimento{
+    width: 399px;
+    height: 269px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #634CD9;
+    background: #FFF;
+    position: absolute;
+    top: 315px;
+    left: 1000px;
+}
+
+#legenda{
+    width: 125px;
+height: 99px;
+flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #8CE264;
+    background: #634CD9;
+    position: absolute;
+    top: 71px;
+    left: 254px;
+}
+
+#compdiario{
+    width: 186px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #634CD9;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 214px;
+    left: 10px;
+}
+
+#legendatxt{
+    width: 74px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#marcacao{
+    width: 608px;
+    height: 524px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #8CE264;
+    background: #634CD9;
+    position: absolute;
+    top: 600px;
+    left: 795px;
+}
+
+#mes{
+    width: 407px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #FFF;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#marcador{
+    width: 62px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #FFFF;
+    border: solid #FFFF;
+}
+
+#materia1{
+    width:502px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #634CD9;
+    border: solid #634CD9;
+}
+#materia2{
+    width:503px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFFF;
+    border: solid #634CD9;
+}
+
+.toggle-button {
+/* Adicione estilos básicos para o botão */
+width: 62px;
+height: 64px;
+flex-shrink: 0;
+border-radius: 5px;
+background: #FFFF;
+border: solid #FFFF;
+}
+
+.toggle-button.active {
+/* Adicione estilos para o botão ativo */
+background-color: #4CAF50; /* ou a cor desejada */
+color: white;
+}
+    </style>
 </head>
 
 <body>
@@ -110,40 +532,40 @@
         </div>
 
         
-        <button id="marcador" style="position: absolute; top: 108px; left: 115px;"></button>
-        <button id="marcador" style="position: absolute; top: 108px; left: 115px;"></button>
-        <button id="marcador" style="position: absolute; top: 108px; left: 195px;"></button>
-        <button id="marcador" style="position: absolute; top: 108px; left: 275px;"></button>
-        <button id="marcador" style="position: absolute; top: 108px; left: 355px;"></button>
-        <button id="marcador" style="position: absolute; top: 108px; left: 435px;"></button>
-        <button id="marcador" style="position: absolute; top: 108px; left: 515px;"></button>
-
-        <button id="marcador" style="position: absolute; top: 188px; left: 35px;"></button>
-        <button id="marcador" style="position: absolute; top: 188px; left: 115px;"></button>
-        <button id="marcador" style="position: absolute; top: 188px; left: 195px;"></button>
-        <button id="marcador" style="position: absolute; top: 188px; left: 275px;"></button>
-        <button id="marcador" style="position: absolute; top: 188px; left: 355px;"></button>
-        <button id="marcador" style="position: absolute; top: 188px; left: 435px;"></button>
-        <button id="marcador" style="position: absolute; top: 188px; left: 515px;"></button>
-
-        <button id="marcador" style="position: absolute; top: 268px; left: 35px;"></button>
-        <button id="marcador" style="position: absolute; top: 268px; left: 115px;"></button>
-        <button id="marcador" style="position: absolute; top: 268px; left: 195px;"></button>
-        <button id="marcador" style="position: absolute; top: 268px; left: 275px;"></button>
-        <button id="marcador" style="position: absolute; top: 268px; left: 355px;"></button>
-        <button id="marcador" style="position: absolute; top: 268px; left: 435px;"></button>
-        <button id="marcador" style="position: absolute; top: 268px; left: 515px;"></button>
-
-        <button id="marcador" style="position: absolute; top: 348px; left: 35px;"></button>
-        <button id="marcador" style="position: absolute; top: 348px; left: 115px;"></button>
-        <button id="marcador" style="position: absolute; top: 348px; left: 195px;"></button>
-        <button id="marcador" style="position: absolute; top: 348px; left: 275px;"></button>
-        <button id="marcador" style="position: absolute; top: 348px; left: 355px;"></button>
-        <button id="marcador" style="position: absolute; top: 348px; left: 435px;"></button>
-        <button id="marcador" style="position: absolute; top: 348px; left: 515px;"></button>
-
-        <button id="marcador" style="position: absolute; top: 428px; left: 35px;"></button>
-        <button id="marcador" style="position: absolute; top: 428px; left: 115px;"></button>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 35px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 115px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 195px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 275px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 355px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 435px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 108px; left: 515px;">{{ color_state }}</div>
+    
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 35px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 115px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 195px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 275px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 355px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 435px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 188px; left: 515px;">{{ color_state }}</div>
+    
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 35px; ">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 115px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 195px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 275px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 355px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 435px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 268px; left: 515px;">{{ color_state }}</div>
+    
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 35px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 115px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 195px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 275px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 355px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 435px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 348px; left: 515px;">{{ color_state }}</div>
+    
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 428px; left: 35px;">{{ color_state }}</div>
+        <div class="toggle-button" id="colorToggle" onclick="changeColor(this)" style="position: absolute; top: 428px; left: 115px;">{{ color_state }}</div>
 
 
         <button
@@ -154,160 +576,29 @@
 
 
     </div>
-</body>
-
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="autoavaliacao.css">
-    <title>Document</title>
-</head>
-
-<body>
-    <img src="{% static 'autoavaliacaotxt.png' %}" alt="" id="atividades">
-    <img src="{% static 'perfil.png' %}" alt="" id="perfil">
-    <img src="{% static 'seta.svg' %}" alt="" id="seta">
-    <p id="alunoa">Aluno A</p>
-    <img src="{% static 'elipse.svg' %}" alt="" id="elipse">
-    <img src="{% static 'perfil.png' %}" alt="" id="perfil2">
-    <img src="{% static 'elipse_verde.svg' %}" alt="" id="elipse_verde">
-    <img src="{% static 'exclamação.png' %}" alt="" id="exclamacao">
-
-    <div id="divmaterias">
-        <div style="width: 621px; height: 83px; flex-shrink: 0; border-radius: 10px; border: 5px solid #634CD9; background: #634CD9;">
-            <p style="width: 700px; text-align: justify; text-align-last: left; color: #FFF; font-family: 'Inter', sans-serif; font-size: 36px; font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: 20px; left: 10px; margin: 0;">
-                Como o aluno se autoavaliou hoje?
-            </p>
-        </div>
-        <div style="width: 621px; height: 83px; flex-shrink: 0; border-radius: 20px; border: 5px solid #634CD9; background: #FFFF;">
-            <img src="{% static 'elipse_verde.svg' %}" alt="" id="icone" style="position: absolute; top: 20%; left: 30px;">
-            <img src="{% static 'sorrindo.png' %}" alt="" id="icone2" style="top: 20.5%;">
-            <p style="width: 700px; text-align: justify; text-align-last: left; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px; font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: 120px; left: 107px; margin: 0;">
-                Excelente
-            </p>
-        </div>
-        <div style="width: 621px; height: 83px; flex-shrink: 0; border-radius: 20px; border: 5px solid #634CD9; background: #FFFF;">
-            <img src="{% static 'elipse_amarela.svg' %}" alt="" id="icone" style="top: 210px;">
-            <img src="{% static 'serio.png' %}" alt="" id="icone2" style="top: 211px;">
-            <p style="width: 700px; text-align: justify; text-align-last: left; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px; font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: 210px; left: 107px; margin: 0;">
-                Bom
-            </p>
-        </div>
-        <div style="width: 621px; height: 83px; flex-shrink: 0; border-radius: 20px; border: 5px solid #634CD9; background: #FFFF;">
-            <img src="{% static 'elipse_vermelha.svg' %}" alt="" id="icone" style="top:300px;">
-            <img src="{% static 'triste.png' %}" alt="" id="icone2" style="top: 302px;">
-            <p style="width: 700px; text-align: justify; text-align-last: left; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px; font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: 300px; left: 107px; margin: 0;">
-                A desejar
-            </p>
-        </div>
-        <div style="width: 621px; height: 183px; flex-shrink: 0; border-radius: 20px; border: 5px solid #634CD9; background: #FFFF;">
-            <img src="{% static 'elipse_cinza.svg' %}" alt="" id="icone" style="top: 435px;">
-            <img src="{% static 'semboca.png' %}" alt="" id="icone2" style="top: 437px;" >
-            <p style="width: 700px; text-align: justify; text-align-last: left; color: #634CD9; font-family: 'Inter', sans-serif; font-size: 36px; font-style: normal; font-weight: 700; line-height: normal; position: absolute; top: 440px; left: 107px; margin: 0;">
-                O aluno nào se autoavaliou
-            </p>
-        </div>
-    </div>
-
-    <div id="div2">
-        <p id="p1">Sala: 1</p>
-        <p id="p2">Turno: Manhã</p>
-        <p id="p3">Idade: X</p>
-        <p id="p4">Responsáveis: A e B</p>
-    </div>
-
-    <div id="divpresenca">
-        <p id="presencageral">Presença geral</p>
-        <img src="{% static 'elipse_verde.svg' %}" alt="" id="elipse_verde2">
-        <img src="{% static 'correto.png' %}" alt="" id="correto">
-        <img src="{% static 'elipse_vermelha.svg' %}" alt="" id="elipse_vermelha">
-        <img src="{% static 'x.png' %}" alt="" id="x">
-    </div>
-    <div id="divausencia">
-        <p id="ausencia">Ausência em</p>
-        <p id="ausencia2">atividade(S):</p>
-        <img src="{% static 'elipse_amarela.svg' %}" alt="" id="elipse_amarela">
-    </div>
-    <div id="linha"></div>
-    <div id="linha2"></div>
-
-    <div id="divcomparecimento">
-        <p id="compdiario">Comparecimento Diário</p>
-        <div id="legenda">
-            <img src="{% static 'elipse_verde.svg' %}" alt="" id="elipse_legenda"
-                style="position: absolute; top: 13px; ; left: 15px;">
-            <img src="{% static 'elipse_amarela.svg' %}" alt="" id="elipse_legenda"
-                style="position: absolute; top: 40%; transform: translateY(-50%); left: 15px;">
-            <img src="{% static 'elipse_vermelha.svg' %}" alt="" id="elipse_legenda"
-                style="position: absolute; top: 55px; ; left: 15px;">
-            <img src="{% static 'elipse_cinza.svg' %}" alt="" id="elipse_legenda"
-                style="position: absolute; top: 75px; ; left: 15px;">
-            <p id="legendatxt" style="position: absolute; top: -3px; ; left: 30px;">Excelente</p>
-            <p id="legendatxt" style="position: absolute; top: 27%; transform: translateY(-50%) ; left: 12px;">Bom</p>
-            <p id="legendatxt" style="position: absolute; top: 48%; transform: translateY(-50%) ; left: 28px;">A desejar
-            </p>
-            <p id="legendatxt" style="position: absolute; top: 68%; transform: translateY(-50%) ; left: 28px;">Ausente
-            </p>
-        </div>
-    </div>
-
-    <div id="marcacao">
-        <div id="mes">
-            <img src="{% static 'seta.svg' %}" alt=""
-                style="position: absolute; top: 50%; transform: translateY(-50%); left: 10px;">
-            <img src="{% static 'seta.svg' %}" alt=""
-                style="position: absolute; top: 15%; transform: translateY(-50%); right: 10px; transform: rotate(-180.205deg);">
-        </div>
-
-        <button id="marcador" style="position: absolute; top: 108px; left: 35px;"></button>
-        <button id="marcador" style="position: absolute; top: 108px; left: 115px;"></button>
-        <button id="marcador" style="position: absolute; top: 108px; left: 195px;"></button>
-        <button id="marcador" style="position: absolute; top: 108px; left: 275px;"></button>
-        <button id="marcador" style="position: absolute; top: 108px; left: 355px;"></button>
-        <button id="marcador" style="position: absolute; top: 108px; left: 435px;"></button>
-        <button id="marcador" style="position: absolute; top: 108px; left: 515px;"></button>
-
-        <button id="marcador" style="position: absolute; top: 188px; left: 35px;"></button>
-        <button id="marcador" style="position: absolute; top: 188px; left: 115px;"></button>
-        <button id="marcador" style="position: absolute; top: 188px; left: 195px;"></button>
-        <button id="marcador" style="position: absolute; top: 188px; left: 275px;"></button>
-        <button id="marcador" style="position: absolute; top: 188px; left: 355px;"></button>
-        <button id="marcador" style="position: absolute; top: 188px; left: 435px;"></button>
-        <button id="marcador" style="position: absolute; top: 188px; left: 515px;"></button>
-
-        <button id="marcador" style="position: absolute; top: 268px; left: 35px;"></button>
-        <button id="marcador" style="position: absolute; top: 268px; left: 115px;"></button>
-        <button id="marcador" style="position: absolute; top: 268px; left: 195px;"></button>
-        <button id="marcador" style="position: absolute; top: 268px; left: 275px;"></button>
-        <button id="marcador" style="position: absolute; top: 268px; left: 355px;"></button>
-        <button id="marcador" style="position: absolute; top: 268px; left: 435px;"></button>
-        <button id="marcador" style="position: absolute; top: 268px; left: 515px;"></button>
-
-        <button id="marcador" style="position: absolute; top: 348px; left: 35px;"></button>
-        <button id="marcador" style="position: absolute; top: 348px; left: 115px;"></button>
-        <button id="marcador" style="position: absolute; top: 348px; left: 195px;"></button>
-        <button id="marcador" style="position: absolute; top: 348px; left: 275px;"></button>
-        <button id="marcador" style="position: absolute; top: 348px; left: 355px;"></button>
-        <button id="marcador" style="position: absolute; top: 348px; left: 435px;"></button>
-        <button id="marcador" style="position: absolute; top: 348px; left: 515px;"></button>
-
-        <button id="marcador" style="position: absolute; top: 428px; left: 35px;"></button>
-        <button id="marcador" style="position: absolute; top: 428px; left: 115px;"></button>
-
-        <button
-            style="width: 18px; height: 19px; flex-shrink: 0; border: 3px solid #0C004C; background: #FFF;position: absolute; top: 478px; left: 507px;"></button>
-        <p
-            style="width: 52px; color: #FFF; font-family:'Inter', sans-serif; font-size: 20px; font-style: normal; font-weight: 700; position: absolute; top: 455px; left: 527px;">
-            Hoje</p>
-    </div>
+    <script>
+        // JavaScript para alternar as cores
+        function changeColor(button) {
+            // Determina a próxima cor com base na cor atual
+            var currentColor = button.style.backgroundColor;
+            var nextColor = '';
+    
+            if (currentColor === 'rgb(255, 255, 255)' || currentColor === '') {
+                nextColor = 'rgb(255, 0, 0)'; // Vermelho
+            } else if (currentColor === 'rgb(255, 0, 0)') {
+                nextColor = 'rgb(0, 0, 255)'; // Azul
+            } else {
+                nextColor = 'rgb(255, 255, 255)'; // Branco
+            }
+    
+            // Define a nova cor
+            button.style.backgroundColor = nextColor;
+        }
+    </script>
 
     {% endblock %}
 </body>
 
 </html>
+
+

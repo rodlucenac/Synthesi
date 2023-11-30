@@ -77,7 +77,9 @@
     </div>
 
     <button id="historico"></button>
-    <button id="solicitar"></button>
+    <a href="{% url 'solicitar' nome=nome turma=turma idade=idade %}">
+        <button id="solicitar"></button>
+    </a>
     <div id="hist_reunioes">
         <div id="reuniao" >
             <p id="reuniaotxt">--------------------------------------</p>

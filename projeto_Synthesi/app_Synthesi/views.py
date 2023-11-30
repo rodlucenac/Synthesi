@@ -3,8 +3,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.shortcuts import render, redirect
-from .models import Alunos, ButtonColor
-from django.http import JsonResponse
+from .models import Alunos, Materias, Solicitacao
+
 
 def pagina_inicio(request):
     if request.method == 'POST':
@@ -78,6 +78,28 @@ def pagina_autoavaliacao(request, nome=None, turma=None, idade=None):
     context = {'nome': nome, 'turma': turma, 'idade': idade}
     return render(request, 'autoavaliacao.html', context)
 
+
+def pagina_solicitar(request, nome=None, turma=None, idade=None):
+    if request.method == 'POST':
+        msg = request.POST.get('msg')
+
+        nova_msg = Solicitacao(msg=msg)
+        print(msg)
+        nova_msg.save()
+        context = {'nome': nome, 'turma': turma, 'idade': idade}
+        return render(request, 'hist_reunioes.html', context)
+    else:
+        if nome is None or turma is None or idade is None:
+            # Se os argumentos não foram fornecidos, você pode buscar essas informações de outra forma.
+            # Por exemplo, você pode buscar essas informações do banco de dados ou usar dados padrão.
+            # Aqui estou apenas dando um exemplo fixo, ajuste conforme necessário.
+            nome = "Aluno Padrão"
+            turma = "Turma Padrão"
+            idade = 10
+        print(nome, turma, idade)
+        context = {'nome': nome, 'turma': turma, 'idade': idade}
+        return render(request, 'solicitar_reunioes.html', context)
+
 def pagina_reunioes(request, nome=None, turma=None, idade=None):
     if nome is None or turma is None or idade is None:
         # Se os argumentos não foram fornecidos, você pode buscar essas informações de outra forma.
@@ -99,25 +121,7 @@ def pagina_atividades(request, nome=None, turma=None, idade=None):
         turma = "Turma Padrão"
         idade = 10
 
-    # Modifique esta linha para garantir que você esteja usando o campo correto para a consulta
-    button_color, created = ButtonColor.objects.get_or_create(user=request.user)
-
-    if request.method == 'POST':
-        # Lógica para alterar a cor do botão
-        current_color = button_color.color
-
-        if current_color == 'rgb(255, 255, 255)':
-            next_color = 'rgb(255, 0, 0)'  # Vermelho
-        elif current_color == 'rgb(255, 0, 0)':
-            next_color = 'rgb(0, 0, 255)'  # Azul
-        else:
-            next_color = 'rgb(255, 255, 255)'  # Branco
-
-        # Atualize a cor no banco de dados
-        button_color.color = next_color
-        button_color.save()
-
-    context = {'nome': nome, 'turma': turma, 'idade': idade, 'button_color': button_color.color}
+    context = {'nome': nome, 'turma': turma, 'idade': idade}
     return render(request, 'atividades.html', context)
 
 def pagina_eueomundo(request):
@@ -142,26 +146,25 @@ def pagina_adicionar(request):
     return render(request, 'adicionar.html')
 
 
-def alterar_cor(request, nome, turma, idade):
-    # Recupere ou crie uma instância de ButtonColor associada ao usuário
-    button_color, created = ButtonColor.objects.get_or_create(user=request.user)
 
+def pagina_adicionarmateria(request):
     if request.method == 'POST':
-        # Lógica para alterar a cor do botão
-        current_color = button_color.color
+        materia = request.POST.get('materia')
 
-        if current_color == 'rgb(255, 255, 255)':
-            next_color = 'rgb(255, 0, 0)'  # Vermelho
-        elif current_color == 'rgb(255, 0, 0)':
-            next_color = 'rgb(0, 0, 255)'  # Azul
-        else:
-            next_color = 'rgb(255, 255, 255)'  # Branco
+        nome = "exemplo_nome"
+        turma = "exemplo_turma"
+        idade = "exemplo_idade"
 
-        # Atualize a cor no banco de dados
-        button_color.color = next_color
-        button_color.save()
+        novo_materia = Materias(materia=materia)
+        print(materia)
+        novo_materia.save()
+        return redirect('atividades', nome=nome, turma=turma, idade=idade)
+    
+    
+    return render(request, 'adicionar_materias.html')
 
-    return JsonResponse({'color': button_color.color})
+
+
 
 
 

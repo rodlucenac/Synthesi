@@ -457,6 +457,11 @@ color: white;
         </button>
     </div>
 
+    <a href="{% url 'adicionar_materia' %}">
+        <img src="{% static 'mais.png' %}" alt="" id="mais" style="position: absolute; top: 1064px; left: 500px;">
+    </a>
+    <img src="{% static 'menos.svg' %}" alt="" id="menos" style="position: absolute; top: 914px; left: 1045px;">
+
     <div id="div2">
         <p id="p1">Sala: {{ turma }}</p>
         <p id="p2">Turno: Manhã</p>

@@ -10,19 +10,20 @@
 </head>
 
 <body>
+    {% block content %}
     <img src="{% static 'reunioestxt.png' %}" alt="" id="atividades">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil">
     <img src="{% static 'seta.svg' %}" alt="" id="seta">
-    <p id="alunoa">Aluno A</p>
+    <p id="alunoa">{{ nome }}</p>
     <img src="{% static 'elipse.svg' %}" alt="" id="elipse">
     <img src="{% static 'perfil.png' %}" alt="" id="perfil2">
     <img src="{% static 'elipse_verde.svg' %}" alt="" id="elipse_verde">
     <img src="{% static 'exclamação.png' %}" alt="" id="exclamacao">
 
     <div id="divdados">
-        <p id="p1">Sala: 1</p>
+        <p id="p1">sala: {{ turma }}</p>
         <p id="p2">Turno: Manhã</p>
-        <p id="p3">Idade: X</p>
+        <p id="p3">Idade: {{ idade }}</p>
         <p id="p4">Responsáveis: A e B</p>
     </div>
 
@@ -77,12 +78,17 @@
     <div id="hist_reunioes">
        <p id="solicitar_reuniao">Solicitação de reunião com os responsáveis de Aluno A</p>
         <p id="corpo">Corpo da mensagem</p>
-        <input type="text" name="" id="mensagem_solicitacao">
-        <button id="cancelar"></button>
-        <button id="enviar"></button>
+        <form action="{% url 'solicitar' nome=nome turma=turma idade=idade %}" method="POST">
+            {% csrf_token %}
+            <input type="text" name="msg" id="mensagem_solicitacao">
+            <button id="cancelar"></button>
+            <button id="enviar" type="submit"></button>
+        </form>
+        
     </div>
 
 
     </div>
+    {% endblock %}
 </body>
 </html>

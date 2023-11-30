@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Matéria</title>
+    <link rel="stylesheet" href="{% static 'adicionar.css' %}">
+</head>
+<body>
+    <img src="{% static 'clorofill.png' %}" alt="" id="clorofill">
+    <p id="p1">Cadastro de Matéria</p>
+    <form action="{% url 'adicionar_materia' %}" method="POST">
+        {% csrf_token %}
+        <div id="div">
+            <p id="emailtxt">Nome</p>
+            <input type="text" name="materia" id="email">
+            <button type="button" id="cancelar" >Cancelar</button>
+            <button type="submit" id="continuar"></button> 
+        </div>
+    </form>
+
+
+</body>
+</html>

@@ -10,6 +10,10 @@ class Alunos(models.Model):
     turma = models.TextField(max_length=255)
     idade = models.CharField(max_length=100)
 
-class ButtonColor(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    color = models.CharField(max_length=20, default='rgb(255, 255, 255)')
+class Materias(models.Model):
+    materia = models.TextField(max_length=255)
+
+class Solicitacao(models.Model):
+    msg = models.TextField(max_length=255)
+
+
