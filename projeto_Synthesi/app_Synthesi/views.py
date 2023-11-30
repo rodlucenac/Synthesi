@@ -3,12 +3,9 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.shortcuts import render, redirect
-<<<<<<< HEAD
 from .models import Aluno, Materias, Solicitacao
-=======
 from .models import Alunos, Materias, Solicitacao
 from django.http import JsonResponse
->>>>>>> 5752a915800ef826898edfc31a9cda8400410dcb
 
 def atualizar_cor(request, aluno_id):
     if request.method == 'POST' and request.is_ajax():
