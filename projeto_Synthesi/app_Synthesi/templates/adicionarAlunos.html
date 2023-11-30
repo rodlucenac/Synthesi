@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'adicionarAluno.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <img src="{% static 'eu_eo_mundo.png' %}" alt="" id="eu_eo_mundo">
+    <p id="manha">Manhã</p>
+    <img src="{% static 'perfil.png' %}" alt="" id="perfil">
+    <img src="{% static 'seta.svg' %}" alt="" id="seta">
+    <a href="{% url 'adicionar' %}">
+        <img src="{% static 'mais.png' %}" alt="" id="mais" style="position: absolute; top: 914px; left: 975px;">
+    </a>
+    <img src="{% static 'menos.svg' %}" alt="" id="menos" style="position: absolute; top: 914px; left: 1045px;">
+    <form action="{% url 'eu_eo_mundo' %}" method="POST">
+        {% csrf_token %}
+        <div id="div1">
+            <div id="div3">
+                <a href="" id="mais">
+                    <img src="{% static 'mais.png' %}" alt="">
+                </a>
+            </div>
+            <div id="div2">
+                <div>
+                    <label for="" style="color: #FFF;">Nome:</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+                <div>
+                    <label for="" style="color: #FFF;">Idade:</label>
+                    <input type="number" name="idade" id="idade">
+                </div>
+                <div>
+                    <label for="" style="color: #FFF;">CPF:</label>
+                    <input type="text" name="cpf" id="cpf">
+                </div>
+                <div>
+                    <label for="" style="color: #FFF;">Tipo rh:</label>
+                    <input type="text" name="rh" id=""rh>
+                </div>
+                <div>
+                    <label for="" style="color: #FFF;">Endereço:</label>
+                    <input type="text" name="end" id="end">
+                </div>
+                <div>
+                    <label for="" style="color: #FFF;">Responsavel:</label>
+                    <input type="text" name="respons" id="respons">
+                </div>
+                <div>
+                    <label for="" style="color: #FFF;">Contato:</label>
+                    <input type="text" name="contato" id="contato">
+                </div>
+            </div>
+            <button class="button cancel-button" type="submit">Cancelar</button>
+            <button class="button continue-button" type="submit">Continuar</button>
+        </div>  
+    </form>
+</body>
+</html>
